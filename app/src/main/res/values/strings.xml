@@ -1,20 +1,25 @@
 <resources>
     <string name="app_name">Ghost Home</string>
     <string name="get_started">Get Started</string>
+    <string name="log_in">Log In</string>
     <string name="create_an_owner_s_account">create an Owner\'s Account</string>
+    <string name="sign_into_your_registered_account">Sign into your registered ghost switch account</string>
     <string name="user_name">User Name</string>
     <string name="phone_number">Phone Number</string>
     <string name="password">Password</string>
     <string name="confirm_password">Confirm Password</string>
     <string name="create_account">Create Account</string>
+    <string name="login">Login</string>
     <string name="verify_recovery_number">Verify Recovery Number</string>
     <string name="verify_phone_number">Verify Phone Number</string>
     <string name="otp_code_was_sent_to">OTP code was sent to</string>
     <string name="otp_expires_in">OTP expires in</string>
     <string name="i_did_not_receive_any_code">I did not receive any code</string>
+    <string name="what_do_you_want_to_call_your_home">What do you want to call your home ?</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="_08105530818">08105530818</string>
     <string name="_80_secs">80 secs</string>
+    <string name="_continue">Continue</string>
 </resources>
