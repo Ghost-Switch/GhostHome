@@ -3,176 +3,172 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <data>
-        <import type="android.view.View"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F4F3F3">
 
-        <variable
-            name="isAllFieldValid"
-            type="Boolean" />
-    </data>
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="482dp"
+            android:layout_height="543dp"
+            android:background="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/background">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="482dp"
-                android:layout_height="543dp"
-                android:background="#FFFFFF"
-                android:layout_marginStart="50dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                <ImageView
+                    android:id="@+id/ic_rectangle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="55dp"
+                    android:layout_marginTop="42dp"
+                    android:src="@drawable/rectangle_57"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-                <androidx.constraintlayout.widget.ConstraintLayout
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_log_in"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="55dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/manrope_semibold"
+                    android:text="@string/log_in"
+                    android:textColor="#2E2E2E"
+                    android:textSize="30sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ic_rectangle" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_created"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="55dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/manrope_semibold"
+                    android:text="@string/sign_into_your_registered_account"
+                    android:textColor="#4E4E4E"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_log_in" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="55dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/manrope_semibold"
+                    android:text="@string/user_name"
+                    android:textColor="#2E2E2E"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_created" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/username_layout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="42dp"
+                    android:layout_marginStart="55dp"
+                    android:layout_marginEnd="55dp"
+                    android:baselineAligned="false"
+                    app:boxBackgroundColor="#F4F3F3"
+                    android:textColorHint="@color/black"
+                    app:errorEnabled="false"
+                    app:helperTextEnabled="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_username"
+                    app:placeholderTextColor="#F4F3F3">
 
-                    <ImageView
-                        android:id="@+id/ic_rectangle"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="55dp"
-                        android:layout_marginTop="42dp"
-                        android:src="@drawable/rectangle_57"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <com.google.android.material.textview.MaterialTextView
-                        android:id="@+id/tv_log_in"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="55dp"
-                        android:layout_marginTop="10dp"
-                        android:fontFamily="@font/manrope_semibold"
-                        android:text="@string/log_in"
-                        android:textColor="#2E2E2E"
-                        android:textSize="30sp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/ic_rectangle" />
-
-                    <com.google.android.material.textview.MaterialTextView
-                        android:id="@+id/tv_created"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="55dp"
-                        android:layout_marginTop="10dp"
-                        android:fontFamily="@font/manrope_semibold"
-                        android:text="@string/sign_into_your_registered_account"
-                        android:textColor="#4E4E4E"
-                        android:textSize="14sp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/tv_log_in" />
-
-                    <com.google.android.material.textview.MaterialTextView
-                        android:id="@+id/tv_username"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="55dp"
-                        android:layout_marginTop="10dp"
-                        android:fontFamily="@font/manrope_semibold"
-                        android:text="@string/user_name"
-                        android:textColor="#2E2E2E"
-                        android:textSize="12sp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/tv_created" />
-
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/username_layout"
-                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/username_et"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="55dp"
-                        android:layout_marginEnd="55dp"
-                        android:baselineAligned="false"
-                        app:boxBackgroundColor="#F4F3F3"
-                        android:textColorHint="@color/black"
-                        app:errorEnabled="false"
-                        app:helperTextEnabled="true"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/tv_username"
-                        app:placeholderTextColor="#F4F3F3">
-
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/username_et"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:focusable="true"
-                            android:focusableInTouchMode="true"
-                            android:inputType="text"
-                            app:cornerRadius="12dp" />
-                    </com.google.android.material.textfield.TextInputLayout>
+                        android:focusable="false"
+                        android:inputType="none"
+                        app:cornerRadius="12dp" />
+                </com.google.android.material.textfield.TextInputLayout>
 
 
 
-                    <com.google.android.material.textview.MaterialTextView
-                        android:id="@+id/tv_password"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="55dp"
-                        android:layout_marginTop="20dp"
-                        android:fontFamily="@font/manrope_semibold"
-                        android:text="@string/password"
-                        android:textColor="#2E2E2E"
-                        android:textSize="12sp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/username_layout" />
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="55dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/manrope_semibold"
+                    android:text="@string/password"
+                    android:textColor="#2E2E2E"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/username_layout" />
 
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/password_layout"
-                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/password_layout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:layout_marginStart="55dp"
+                    android:layout_marginEnd="55dp"
+                    app:boxBackgroundColor="#F4F3F3"
+                    android:baselineAligned="false"
+                    app:endIconDrawable="@drawable/ic_password"
+                    app:endIconMode="custom"
+                    android:textColorHint="@color/black"
+                    app:errorEnabled="false"
+                    app:helperTextEnabled="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_password"
+                    app:placeholderTextColor="#F4F3F3">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/password_et"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="55dp"
-                        android:layout_marginEnd="55dp"
-                        app:boxBackgroundColor="#F4F3F3"
-                        android:baselineAligned="false"
-                        app:endIconDrawable="@drawable/ic_password"
-                        app:endIconMode="custom"
-                        android:textColorHint="@color/black"
-                        app:errorEnabled="false"
-                        app:helperTextEnabled="true"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/tv_password"
-                        app:placeholderTextColor="#F4F3F3">
-
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/password_et"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:focusable="true"
-                            android:focusableInTouchMode="true"
-                            android:inputType="text"
-                            app:cornerRadius="12dp" />
-                    </com.google.android.material.textfield.TextInputLayout>
+                        android:focusable="false"
+                        android:inputType="none"
+                        app:cornerRadius="12dp" />
+                </com.google.android.material.textfield.TextInputLayout>
 
 
 
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/btn_login"
-                        android:layout_width="match_parent"
-                        android:layout_height="55dp"
-                        android:layout_marginStart="55dp"
-                        android:layout_marginTop="25dp"
-                        android:layout_marginEnd="55dp"
-                        android:textSize="16sp"
-                        android:enabled="@{isAllFieldValid}"
-                        app:layout_constraintStart_toStartOf="parent"
-                        android:text="@string/login"
-                        android:textColor="#FFFFFF"
-                        app:layout_constraintTop_toBottomOf="@id/password_layout"
-                        app:cornerRadius="3dp"
-                        android:backgroundTint="@{isAllFieldValid ? @color/button_clicked_color: @color/button_unclicked_color}"/>
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="match_parent"
+                    android:layout_height="49dp"
+                    android:layout_marginStart="55dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginEnd="55dp"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:text="@string/login"
+                    android:textColor="#FFFFFF"
+                    app:layout_constraintTop_toBottomOf="@id/password_layout"
+                    app:cornerRadius="3dp"
+                    android:backgroundTint="#50BD000D"/>
 
 
 
-                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-            </com.google.android.material.card.MaterialCardView>
+        </com.google.android.material.card.MaterialCardView>
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:src="@drawable/icon"
+            app:layout_constraintBottom_toBottomOf="parent"/>
 
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
