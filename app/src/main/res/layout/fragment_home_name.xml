@@ -43,32 +43,33 @@
                     android:id="@+id/home_name_layout"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="371dp"
-                    android:layout_height="48dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="25dp"
                     android:baselineAligned="false"
                     android:textColorHint="@color/black"
                     app:boxBackgroundColor="#F4F3F3"
                     app:errorEnabled="false"
                     app:helperTextEnabled="true"
-                    app:layout_constraintStart_toStartOf=""
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tv_home_name"
-                    app:placeholderTextColor="#F4F3F3"
-                    tools:layout_editor_absoluteX="106dp"
-                    tools:layout_editor_absoluteY="47dp">
+                    app:placeholderTextColor="#F4F3F3">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/home_name_et"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:focusable="false"
-                        android:inputType="none"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:inputType="text"
                         app:cornerRadius="12dp" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btn_continue"
                     android:layout_width="371dp"
-                    android:layout_height="48dp"
+                    android:layout_height="55dp"
                     android:layout_marginTop="25dp"
                     android:backgroundTint="#50BD000D"
                     android:text="@string/_continue"
@@ -85,13 +86,6 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </com.google.android.material.card.MaterialCardView>
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/icon"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
