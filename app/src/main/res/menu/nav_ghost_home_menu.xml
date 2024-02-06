@@ -1,35 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:ShowInv="navigation_view">
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <group android:id="@+id/menu_list"
-        android:checkableBehavior="single">
+    <group android:checkableBehavior="single">
         <item
             android:id="@+id/home"
+            android:actionLayout="@layout/nav_drawer_menu_item"
             android:icon="@drawable/ic_home"
             android:title="@string/home" />
 
         <item
             android:id="@+id/rooms"
+            android:actionLayout="@layout/nav_drawer_menu_item"
             android:icon="@drawable/ic_rooms"
             android:title="@string/rooms" />
 
+        <item
+            android:id="@+id/pinned_devices"
+            android:actionLayout="@layout/nav_drawer_menu_item"
+            android:icon="@drawable/ic_pin"
+            android:title="@string/pinned_devices" />
+
+        <item
+            android:id="@+id/light_sockets"
+            android:actionLayout="@layout/nav_drawer_menu_item"
+            android:icon="@drawable/ic_light"
+            android:title="@string/light_sockets" />
 
         <item
             android:id="@+id/devices"
+            android:actionLayout="@layout/nav_drawer_menu_item"
             android:icon="@drawable/ic_devices"
             android:title="@string/devices" />
 
         <item
-            android:id="@+id/pinned_devices"
-            android:icon="@drawable/ic_pin"
-            android:title="@string/pinned_devices" />
-
-
-        <item
             android:id="@+id/settings"
-            android:icon="@drawable/ic_settings"
+            android:actionLayout="@layout/nav_drawer_menu_item"
+            android:icon="@drawable/ic_devices"
             android:title="@string/settings" />
     </group>
     <item android:title="">

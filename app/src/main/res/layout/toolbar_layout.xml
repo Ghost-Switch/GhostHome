@@ -11,55 +11,43 @@
         android:layout_height="?attr/actionBarSize"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <com.google.android.material.textview.MaterialTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:fontFamily="@font/manrope_bold"
-                android:text="@string/oluwadara_s_residence"
-                android:textSize="18sp"
-                android:textColor="#2E2E2E"
-                tools:layout_editor_absoluteX="16dp"/>
-
-            <com.google.android.material.button.MaterialButton
-                android:layout_width="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:layout_height="wrap_content"
-                app:strokeWidth="1dp"
-
-                app:strokeColor="@color/border_color"
-                android:backgroundTint="@color/white"
-                android:text="Distribution Box"
-                android:paddingRight="15dp"
-                android:paddingStart="4dp"
-                android:drawableLeft="@drawable/ellips"
-                android:gravity="center"
-                app:iconSize="2sp"
-                app:iconGravity="textStart"
-                android:textColor="@color/black"
-                android:fontFamily="@font/manrope_semibold"
-                app:elevation="30dp"
-                />
-        </RelativeLayout>
-
-
-    </androidx.appcompat.widget.Toolbar>
-
+        app:layout_constraintTop_toTopOf="parent" />
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="#CBCBCB"
         android:id="@+id/divider"
+        android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tool_bar"
         app:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/divider">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Living Room" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kitchen" />
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/view_pager"
+        android:layout_width="1278dp"
+        android:layout_height="669dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tab_layout"
+        tools:layout_editor_absoluteY="130dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
