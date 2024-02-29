@@ -3,20 +3,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tab_layout"
-        android:background="@color/light_gray_f2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
+
     </com.google.android.material.tabs.TabLayout>
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/view_pager"
-        android:layout_width="match_parent"
-        android:background="@color/light_gray_f2"
-        android:layout_height="match_parent"
+        android:layout_width="1278dp"
+        android:layout_height="669dp"
         tools:layout_editor_absoluteY="130dp" />
 </LinearLayout>

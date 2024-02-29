@@ -7,16 +7,26 @@
     android:layout_height="match_parent"
     tools:context=".GhostHomeActivity">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        <include
+            android:id="@+id/tool_bar"
+            layout="@layout/toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
-    <include
-        layout="@layout/toolbar_layout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        <include
+            android:id="@+id/home_tab"
+            layout="@layout/fragment_home_tab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tool_bar"
+            android:animateLayoutChanges = "true" />
+
+    </RelativeLayout>
+
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/navigation_view"

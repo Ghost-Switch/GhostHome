@@ -5,15 +5,10 @@
     android:layout_height="match_parent"
     tools:context=".ghostHome.livingRoom.AllActiveFragment">
 
-    <com.wefika.flowlayout.FlowLayout
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
         android:layout_width="match_parent"
-        android:layout_margin="30dp"
-        android:layout_height="wrap_content">
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-    </com.wefika.flowlayout.FlowLayout>
+        android:layout_height="match_parent"
+        android:text="@string/hello_blank_fragment" />
 
 </FrameLayout>
