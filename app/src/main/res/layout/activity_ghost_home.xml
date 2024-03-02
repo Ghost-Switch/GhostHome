@@ -33,7 +33,11 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:background="#2F2F2F"
+        android:background="@color/nav_menu_background_color"
+        app:itemIconTint="@color/icon_text_color_state"
+        app:itemShapeFillColor="@color/shape_fill_color"
+        app:itemRippleColor="@color/button_clicked_color"
+        app:itemTextColor="@color/icon_text_color_state"
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/nav_header"
         app:menu="@menu/nav_ghost_home_menu" />

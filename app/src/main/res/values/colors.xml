@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="button_unclicked_color">#50BD000D</color>
+    <color name="button_clicked_color">#BD000D</color>
+    <color name="nav_menu_background_color">#F2F2F2</color>
+    <color name="bold_textview_color">#2E2E2E</color>
+    <color name="menu_icon_color">#8E8E8E</color>
 </resources>

@@ -3,6 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+        <import type="android.view.View"/>
+
+        <variable
+            name="isAllFieldValid"
+            type="Boolean" />
+    </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -71,7 +79,8 @@
                     android:layout_width="371dp"
                     android:layout_height="55dp"
                     android:layout_marginTop="25dp"
-                    android:backgroundTint="#50BD000D"
+                    android:backgroundTint="@{isAllFieldValid ? @color/button_clicked_color : @color/button_unclicked_color}"
+                    android:enabled="@{isAllFieldValid}"
                     android:text="@string/_continue"
                     android:textColor="#FFFFFF"
                     android:textSize="16sp"

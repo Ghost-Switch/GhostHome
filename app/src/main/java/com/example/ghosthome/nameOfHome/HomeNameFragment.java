@@ -39,6 +39,7 @@ public class HomeNameFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         setBinding();
+        binding.setIsAllFieldValid(true);
     }
 
     private void setBinding() {

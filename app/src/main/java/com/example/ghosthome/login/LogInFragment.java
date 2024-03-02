@@ -38,6 +38,8 @@ public class LogInFragment extends Fragment {
         // Initialize NavController
         navController = Navigation.findNavController(view);
         setBinding();
+
+        binding.setIsAllFieldValid(true);
     }
     private void setBinding() {
         binding.btnLogin.setOnClickListener(new View.OnClickListener() {
