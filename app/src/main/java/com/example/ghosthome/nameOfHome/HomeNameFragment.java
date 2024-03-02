@@ -39,6 +39,7 @@ public class HomeNameFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         setBinding();
+        binding.setIsAllFieldValid(true);
     }
 
     private void setBinding() {
@@ -46,10 +47,10 @@ public class HomeNameFragment extends Fragment {
         binding.btnContinue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Navigate to the appropriate destination
-// Create an Intent to navigate from LogInFragment to HomeNameFragment
-                Intent intent = new Intent(getActivity(), GhostHomeActivity.class);
-                startActivity(intent);            }
+                Navigation.findNavController(v).navigate(R.id.action_homeNameFragment_to_ghostHomeActivity);
+
+
+                        }
         });
     }
 }

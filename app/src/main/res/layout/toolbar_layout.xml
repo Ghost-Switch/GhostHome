@@ -13,14 +13,42 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <com.google.android.material.textview.MaterialTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/manrope_bold"
-            android:text="@string/oluwadara_s_residence"
-            android:textSize="18sp"
-            android:textColor="#2E2E2E"
-            tools:layout_editor_absoluteX="16dp"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/manrope_bold"
+                android:text="@string/oluwadara_s_residence"
+                android:textSize="18sp"
+                android:textColor="#2E2E2E"
+                tools:layout_editor_absoluteX="16dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_height="wrap_content"
+                app:strokeWidth="1dp"
+
+                app:strokeColor="@color/border_color"
+                android:backgroundTint="@color/white"
+                android:text="Distribution Box"
+                android:paddingRight="15dp"
+                android:paddingStart="4dp"
+                android:drawableLeft="@drawable/ellips"
+                android:gravity="center"
+                app:iconSize="2sp"
+                app:iconGravity="textStart"
+                android:textColor="@color/black"
+                android:fontFamily="@font/manrope_semibold"
+                app:elevation="30dp"
+                />
+        </RelativeLayout>
+
+
     </androidx.appcompat.widget.Toolbar>
 
 

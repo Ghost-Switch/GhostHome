@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="150dp"
     android:layout_marginBottom="-40dp"
-    android:background="#2F2F2F"
+    android:background="@color/nav_menu_background_color"
     android:padding="16dp">
 
     <ImageView
@@ -24,7 +24,7 @@
         android:layout_toEndOf="@+id/ic_close"
         android:fontFamily="@font/manrope_bold"
         android:text="@string/ghost_home"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/bold_textview_color"
         android:textSize="16sp" />
 
 </RelativeLayout>

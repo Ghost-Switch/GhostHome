@@ -46,4 +46,14 @@
     <string name="smart_locks">Smart Locks</string>
     <string name="add_room">Add Room</string>
     <string name="light_1">Light 1</string>
+    <string name="type">Type</string>
+    <string name="save">Save</string>
+    <string name="room_created">Room Created</string>
+    <string name="rename_type">Rename/Type</string>
+    <string name="add_light">Add Light</string>
+    <string name="add_socket">Add Socket</string>
+    <string name="delete_room">Delete Room</string>
+    <string name="you_want_to_delete_oluwadara_s_room">You want to delete<b> Oluwadara’s room?</b></string>
+    <string name="enter_security_pin_to_delete_oluwadara_s_room">Enter security Pin to Delete<b> Oluwadara’s Room</b></string>
+    <string name="oluwadara_s_room_was_deleted">Oluwadara’s Room was Deleted</string>
 </resources>

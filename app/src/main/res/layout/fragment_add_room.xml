@@ -12,11 +12,16 @@
     <com.wefika.flowlayout.FlowLayout
         android:layout_width="match_parent"
         android:layout_margin="30dp"
+
         android:layout_height="wrap_content">
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
+
+
+
     </com.wefika.flowlayout.FlowLayout>
 
 

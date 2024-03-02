@@ -9,32 +9,15 @@
         <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
         <item name="android:backgroundDimEnabled">false</item>
     </style>
-    <style name="PopupMenu" parent="Widget.AppCompat.PopupMenu"  >
-
-<!--        <item name="android:divider">@color/light_gray_f2</item>-->
-<!--        <item name="android:itemBackground">@color/white</item>-->
-<!--        <item name="android:dividerHeight">1dp</item>-->
-<!--        <item name="android:textColor">@color/black</item>-->
-<!--        <item name="android:colorBackground">@color/white</item>-->
+    <style name="PopupMenu" >
+        <item name="android:popupBackground">@drawable/custom_menu_bg</item>
+        <item name="android:divider">@color/light_gray_f2</item>
+        <item name="android:itemBackground">@color/white</item>
+        <item name="android:dividerHeight">1dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:colorBackground">@color/divider_color</item>
+        <item name="android:fontFamily">@font/manrope_semibold</item>
     </style>
-
-    <style name="CustomTabLayout" parent="Widget.MaterialComponents.TabLayout">
-        <!-- Background color for selected tab -->
-        <item name="tabBackground">@drawable/tab_background_selected</item>
-        <item name="textAllCaps">false</item>
-        <!-- Text color for selected tab -->
-        <item name="tabTextColor">@color/black</item>
-        <item name="android:textAllCaps">false</item>
-    </style>
-
-    <style name="CustomTextAppearanceTab" parent="TextAppearance.Design.Tab">
-        <item name="textAllCaps">false</item>
-        <item name="android:textAllCaps">false</item>
-        <item name="android:fontFamily">@font/manrope_bold</item>
-
-    </style>
-
-
 
 </resources>
 

@@ -17,6 +17,7 @@ public class GetStartedFragment extends Fragment {
 
     private FragmentGetStartedBinding binding;
     private NavController navController;
+     // Initialize with default value
 
 
     public GetStartedFragment() {
@@ -38,6 +39,10 @@ public class GetStartedFragment extends Fragment {
         // Initialize NavController
         navController = Navigation.findNavController(view);
         setBinding();
+        // Set to true or false based on your logic
+        // After updating the variable, you need to notify the layout to refresh
+        binding.setIsAllFieldValid(true);
+
     }
 
     private void setBinding() {
@@ -45,7 +50,7 @@ public class GetStartedFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 // Navigate to the appropriate destination
-                navController.navigate(R.id.action_getStartedFragment_to_logInFragment);
+                navController.navigate(R.id.action_getStartedFragment_to_logInFragment);;
             }
         });
     }

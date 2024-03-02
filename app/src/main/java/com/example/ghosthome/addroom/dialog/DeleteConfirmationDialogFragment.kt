@@ -15,13 +15,11 @@ import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.activityViewModels
 import com.example.ghosthome.addroom.viewmodel.AddRoomViewModel
 import com.example.ghosthome.databinding.FragmentDeleteConfirmationDialogBinding
-import com.example.ghosthome.ghostHome.viewmodel.SocketLightViewModel
 
 
 class DeleteConfirmationDialogFragment : DialogFragment() {
     lateinit var binding:FragmentDeleteConfirmationDialogBinding
     private val sharedViewModel: AddRoomViewModel by activityViewModels()
-    private val socketLightViewModel: SocketLightViewModel by activityViewModels()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -41,6 +39,7 @@ class DeleteConfirmationDialogFragment : DialogFragment() {
 //            dismiss()
         }
         binding.btnContinue.setOnClickListener {
+
             dismiss()
         }
         binding.pinViewOtpCode.addTextChangedListener(object : TextWatcher {
@@ -54,12 +53,7 @@ class DeleteConfirmationDialogFragment : DialogFragment() {
                     binding.secondLayout.visibility=View.GONE
                     binding.layoutLoading.visibility=View.VISIBLE
                     Handler().postDelayed({
-                        if (sharedViewModel.positionValue != -1){
-                            sharedViewModel.deleteRoom(0)
-                        }
-                        else if(socketLightViewModel.positionValue != -1){
-                            socketLightViewModel.deleteRoom(0)
-                        }
+                        sharedViewModel.deleteRoom(0)
                         binding.layoutLoading.visibility=View.GONE
                         binding.continueLayout.visibility=View.VISIBLE
 

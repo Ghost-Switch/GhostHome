@@ -3,6 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="isAllFieldValid"
+            type="Boolean" />
+    </data>
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -15,10 +24,10 @@
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="482dp"
                 android:layout_height="691dp"
-                android:background="#FFFFFF"
                 android:layout_marginStart="50dp"
                 android:layout_marginTop="50dp"
                 android:layout_marginBottom="50dp"
+                android:background="#FFFFFF"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
@@ -83,10 +92,10 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="55dp"
                         android:layout_marginEnd="55dp"
-                        android:padding="0dp"
                         android:baselineAligned="false"
-                        app:boxBackgroundColor="#F4F3F3"
+                        android:padding="0dp"
                         android:textColorHint="@color/black"
+                        app:boxBackgroundColor="#F4F3F3"
                         app:errorEnabled="false"
                         app:helperTextEnabled="true"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -124,9 +133,9 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="55dp"
                         android:layout_marginEnd="55dp"
-                        app:boxBackgroundColor="#F4F3F3"
                         android:baselineAligned="false"
                         android:textColorHint="@color/black"
+                        app:boxBackgroundColor="#F4F3F3"
                         app:errorEnabled="false"
                         app:helperTextEnabled="true"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -140,11 +149,11 @@
                             android:id="@+id/recovery_phone_number_et"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/_234"
-                            android:textColor="@color/black"
-                            android:inputType="phone"
                             android:focusable="true"
                             android:focusableInTouchMode="true"
+                            android:inputType="phone"
+                            android:text="@string/_234"
+                            android:textColor="@color/black"
                             app:cornerRadius="12dp" />
                     </com.google.android.material.textfield.TextInputLayout>
 
@@ -168,11 +177,11 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="55dp"
                         android:layout_marginEnd="55dp"
-                        app:boxBackgroundColor="#F4F3F3"
                         android:baselineAligned="false"
+                        android:textColorHint="@color/black"
+                        app:boxBackgroundColor="#F4F3F3"
                         app:endIconDrawable="@drawable/ic_password"
                         app:endIconMode="custom"
-                        android:textColorHint="@color/black"
                         app:errorEnabled="false"
                         app:helperTextEnabled="true"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -210,11 +219,11 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="55dp"
                         android:layout_marginEnd="55dp"
-                        app:boxBackgroundColor="#F4F3F3"
                         android:baselineAligned="false"
+                        android:textColorHint="@color/black"
+                        app:boxBackgroundColor="#F4F3F3"
                         app:endIconDrawable="@drawable/ic_password"
                         app:endIconMode="custom"
-                        android:textColorHint="@color/black"
                         app:errorEnabled="false"
                         app:helperTextEnabled="true"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -239,14 +248,14 @@
                         android:layout_marginStart="55dp"
                         android:layout_marginTop="25dp"
                         android:layout_marginEnd="55dp"
-                        android:textSize="16sp"
-                        app:layout_constraintStart_toStartOf="parent"
+                        android:backgroundTint="@{isAllFieldValid ? @color/button_clicked_color : @color/button_unclicked_color}"
+                        android:enabled="@{isAllFieldValid}"
                         android:text="@string/create_account"
                         android:textColor="#FFFFFF"
-                        app:layout_constraintTop_toBottomOf="@id/confirm_password_layout"
+                        android:textSize="16sp"
                         app:cornerRadius="3dp"
-                        android:backgroundTint="#50BD000D"/>
-
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/confirm_password_layout" />
 
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
