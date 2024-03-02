@@ -16,10 +16,6 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
-    configurations {
-        cleanedAnnotations
-        implementation.exclude group: 'org.jetbrains' , module:'annotations'
-    }
 
     buildTypes {
         release {
@@ -69,8 +65,5 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0"
     //LiveData
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.4.0"
-    implementation "com.wefika:flowlayout:0.4.1"
-
-
 
 }
