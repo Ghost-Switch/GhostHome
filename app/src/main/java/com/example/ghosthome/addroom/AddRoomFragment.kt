@@ -41,9 +41,9 @@ class AddRoomFragment : Fragment(),OnClickItem ,OnClickMenuItem {
     private val sharedViewModel: AddRoomViewModel by activityViewModels()
     private lateinit var sensorManager: SensorManager
     private lateinit var display: Display
-    var count: Int = 4
-
+    private var count: Int = 4
     private fun observe() {
+
         sharedViewModel.dataList.observe(viewLifecycleOwner){it
             roomAdapter.addCardItem(it)
         }
@@ -65,7 +65,6 @@ class AddRoomFragment : Fragment(),OnClickItem ,OnClickMenuItem {
         observe()
         initData()
         display = requireActivity().windowManager.defaultDisplay
-
         return  binding.root
     }
 
@@ -76,9 +75,7 @@ class AddRoomFragment : Fragment(),OnClickItem ,OnClickMenuItem {
         roomAdapter = MultiViewAdapter(list,context,this,this)
         recyclerView.layoutManager = GridLayoutManager(context,count)
         recyclerView.adapter = roomAdapter
-
     }
-
     override fun onclick(pos: Int) {
 //        roomAdapter.addCardItem(AddRoomModel(1,SidebarModel("Home",R.drawable.ic_home)));
         findNavController().navigate(R.id.action_addRoomFragment_to_addRoomDialogFragment)
@@ -86,7 +83,6 @@ class AddRoomFragment : Fragment(),OnClickItem ,OnClickMenuItem {
     override fun onDestroyView() {
         super.onDestroyView()
         // Remove the observer when the view is destroyed
-
         sharedViewModel.dataList.removeObservers(viewLifecycleOwner)
     }
 

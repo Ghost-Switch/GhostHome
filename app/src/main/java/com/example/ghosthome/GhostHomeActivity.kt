@@ -33,13 +33,14 @@ class GhostHomeActivity : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = ActivityGhostHomeBinding.inflate(layoutInflater)
+        setBinding()
         return  binding.root
     }
 
     private fun setBinding() {
         val homeTabLayout = binding.homeTab
-        tabLayout = homeTabLayout.tabLayout
-        viewPager = homeTabLayout.viewPager
+        tabLayout = homeTabLayout.backgroundTabLayout
+        viewPager = binding.viewPager
         val adapter = OuterTabAdapter(parentFragmentManager, lifecycle)
         adapter.addFragment(LivingRoomFragment(), getString(R.string.living_room))
         adapter.addFragment(KitchenFragment(), getString(R.string.kitchen))

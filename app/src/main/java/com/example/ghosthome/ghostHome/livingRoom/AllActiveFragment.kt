@@ -1,32 +1,61 @@
 package com.example.ghosthome.ghostHome.livingRoom
 
+import android.hardware.SensorManager
 import android.os.Bundle
+import android.view.Display
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.fragment.app.activityViewModels
+import androidx.navigation.Navigation
+import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.ghosthome.R
+import com.example.ghosthome.addroom.OnClickItem
+import com.example.ghosthome.addroom.OnClickMenuItem
+import com.example.ghosthome.addroom.adapter.MultiViewAdapter
+import com.example.ghosthome.addroom.model.AddRoomModel
+import com.example.ghosthome.addroom.viewmodel.AddRoomViewModel
+import com.example.ghosthome.databinding.FragmentAddRoomBinding
+import com.example.ghosthome.databinding.FragmentAllActiveBinding
+import com.example.ghosthome.ghostHome.adapter.AddRoomSocketMultiViewAdapter
+import com.example.ghosthome.ghostHome.viewmodel.SocketLightViewModel
+import com.example.ghosthome.home.adapter.model.SidebarModel
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
+class AllActiveFragment : Fragment(), OnClickItem, OnClickMenuItem {
+    lateinit var binding: FragmentAllActiveBinding
+    lateinit var roomAdapter: AddRoomSocketMultiViewAdapter
+    private lateinit var recyclerView: RecyclerView
+    lateinit var list: ArrayList<AddRoomModel>
+    private val sharedViewModel: AddRoomViewModel by activityViewModels()
+    private val socketLightViewModel: SocketLightViewModel by activityViewModels()
 
-/**
- * A simple [Fragment] subclass.
- * Use the [AllActiveFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
-class AllActiveFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+    private lateinit var display: Display
+    var count: Int = 4
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
+    private fun observe() {
+        socketLightViewModel.dataRoomModel.observe(viewLifecycleOwner) {
+            it
+            roomAdapter.addCardItem(it)
+        }
+        socketLightViewModel.position.observe(viewLifecycleOwner) {
+            it
+            if (it != -1) {
+                Toast.makeText(context, "delete", Toast.LENGTH_SHORT).show()
+                roomAdapter.deleteItem(it)
+            } else {
+            }
+        }
+        socketLightViewModel.receiveString.observe(viewLifecycleOwner) {
+            if (it.isEmpty()) {
+                Toast.makeText(context, "IF String :$it", Toast.LENGTH_SHORT).show()
+            } else {
+//                Toast.makeText(context, "String :$it", Toast.LENGTH_SHORT).show()
+//                findNavController().navigate(R.id.action_ghostHomeActivity_to_addLightDialogFragment2)
+            }
         }
     }
 
@@ -34,27 +63,45 @@ class AllActiveFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_all_active, container, false)
+        binding = FragmentAllActiveBinding.inflate(layoutInflater)
+        observe()
+        initData()
+        display = requireActivity().windowManager.defaultDisplay
+
+        return binding.root
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment AllActiveFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            AllActiveFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+    private fun initData() {
+        list = ArrayList<AddRoomModel>()
+        recyclerView = binding.rv
+
+        Toast.makeText(context, "added", Toast.LENGTH_SHORT).show()
+        socketLightViewModel.addData(AddRoomModel(2, SidebarModel("Home", R.drawable.light_socket)))
+        roomAdapter = AddRoomSocketMultiViewAdapter(list, context, this, this)
+        recyclerView.layoutManager = GridLayoutManager(context, count)
+        recyclerView.adapter = roomAdapter
+
     }
+
+    override fun onclick(pos: Int) {
+
+//        findNavController().navigate(R.id.action_ghostHomeActivity_to_addLightDialogFragment2)
+        findNavController().navigate(R.id.action_ghostHomeActivity_to_addRoomSocketDialogFragment)
+
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        // Remove the observer when the view is destroyed
+        socketLightViewModel.dataRoomModel.removeObservers(viewLifecycleOwner)
+    }
+
+    override fun onClickMenu(pos: Int) {
+//        sharedViewModel.deleteRoom(pos)
+        socketLightViewModel.positionValue = pos
+        findNavController().navigate(R.id.action_ghostHomeActivity_to_deleteConfirmationDialogFragment)
+//        roomAdapter.deleteItem(pos)
+    }
+
+
 }

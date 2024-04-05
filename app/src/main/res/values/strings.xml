@@ -56,4 +56,8 @@
     <string name="you_want_to_delete_oluwadara_s_room">You want to delete<b> Oluwadara’s room?</b></string>
     <string name="enter_security_pin_to_delete_oluwadara_s_room">Enter security Pin to Delete<b> Oluwadara’s Room</b></string>
     <string name="oluwadara_s_room_was_deleted">Oluwadara’s Room was Deleted</string>
+    <string name="add_light_and_socket">Add Light and Socket</string>
+    <string name="select_section_to_add_light_and_socket_from">Select section to add Light and Socket from</string>
+    <string name="to_add_">To add a Light or Socket , select the available Light is your Living Room. Rename Light or Socket to identify light.</string>
+    <string name="name">Name</string>
 </resources>

@@ -49,12 +49,26 @@
         android:id="@+id/ghostHomeActivity"
         android:name="com.example.ghosthome.GhostHomeActivity"
         android:label="activity_ghost_home"
-        tools:layout="@layout/activity_ghost_home" />
+        tools:layout="@layout/activity_ghost_home" >
+        <action
+            android:id="@+id/action_ghostHomeActivity_to_addRoomSocketDialogFragment"
+            app:destination="@id/addRoomSocketDialogFragment" />
+        <action
+            android:id="@+id/action_ghostHomeActivity_to_addLightDialogFragment2"
+            app:destination="@id/addLightDialogFragment" />
+        <action
+            android:id="@+id/action_ghostHomeActivity_to_deleteConfirmationDialogFragment"
+            app:destination="@id/deleteConfirmationDialogFragment" />
+    </fragment>
     <dialog
         android:id="@+id/addRoomDialogFragment"
         android:name="com.example.ghosthome.addroom.dialog.AddRoomDialogFragment"
         android:label="fragment_add_room_dialog"
-        tools:layout="@layout/fragment_add_room_dialog" />
+        tools:layout="@layout/fragment_add_room_dialog" >
+        <action
+            android:id="@+id/action_addRoomDialogFragment_to_addLightDialogFragment"
+            app:destination="@id/addLightDialogFragment" />
+    </dialog>
     <dialog
         android:id="@+id/deleteConfirmationDialogFragment"
         android:name="com.example.ghosthome.addroom.dialog.DeleteConfirmationDialogFragment"
@@ -64,4 +78,52 @@
         android:id="@+id/otpFragment"
         android:name="com.example.ghosthome.otp.OtpFragment"
         android:label="OtpFragment" />
+    <fragment
+        android:id="@+id/lightsAndSocketFragment"
+        android:name="com.example.ghosthome.ghostHome.livingRoom.LightsAndSocketFragment"
+        android:label="LightsAndSocketFragment" />
+    <dialog
+        android:id="@+id/addRoomSocketDialogFragment"
+        android:name="com.example.ghosthome.ghostHome.dialog.AddRoomSocketDialogFragment"
+        android:label="fragment_add_room_socket_dialog"
+        tools:layout="@layout/fragment_add_room_socket_dialog" >
+
+        <action
+            android:id="@+id/action_addRoomSocketDialogFragment_to_addLightDialogFragment2"
+            app:destination="@id/addLightDialogFragment" />
+    </dialog>
+    <fragment
+        android:id="@+id/livingRoomFragment"
+        android:name="com.example.ghosthome.ghostHome.livingRoom.LivingRoomFragment"
+        android:label="LivingRoomFragment" >
+        <action
+            android:id="@+id/action_livingRoomFragment_to_addLightDialogFragment2"
+            app:destination="@id/addLightDialogFragment" />
+        <action
+            android:id="@+id/action_livingRoomFragment_to_addLightDialogFragment7"
+            app:destination="@id/addLightDialogFragment" />
+        <action
+            android:id="@+id/action_livingRoomFragment_to_addLightDialogFragment8"
+            app:destination="@id/addLightDialogFragment" />
+        <action
+            android:id="@+id/action_livingRoomFragment_to_deleteConfirmationDialogFragment"
+            app:destination="@id/deleteConfirmationDialogFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/allActiveFragment"
+        android:name="com.example.ghosthome.ghostHome.livingRoom.AllActiveFragment"
+        android:label="fragment_all_active"
+        tools:layout="@layout/fragment_all_active" >
+        <action
+            android:id="@+id/action_allActiveFragment_to_addLightDialogFragment2"
+            app:destination="@id/addLightDialogFragment" />
+        <action
+            android:id="@+id/action_allActiveFragment_to_deleteConfirmationDialogFragment"
+            app:destination="@id/deleteConfirmationDialogFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/addLightDialogFragment"
+        android:name="com.example.ghosthome.ghostHome.dialog.AddLightDialogFragment"
+        android:label="fragment_add_light_dialog"
+        tools:layout="@layout/fragment_add_light_dialog" />
 </navigation>
