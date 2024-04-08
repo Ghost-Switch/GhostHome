@@ -8,7 +8,7 @@
 
     <fragment
         android:id="@+id/getStartedFragment"
-        android:name="com.example.ghosthome.getStarted.GetStartedFragment"
+        android:name="com.example.ghosthome.register.RegisterFragment"
         android:label="GetStartedFragment"
         tools:layout="@layout/fragment_get_started">
         <action
@@ -17,7 +17,7 @@
     </fragment>
     <fragment
         android:id="@+id/logInFragment"
-        android:name="com.example.ghosthome.login.LogInFragment"
+        android:name="com.example.ghosthome.login.LoginFragment"
         android:label="LogInFragment"
         tools:layout="@layout/fragment_log_in">
         <action
