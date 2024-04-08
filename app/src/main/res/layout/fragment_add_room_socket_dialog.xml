@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ViewFlipper xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/rootFlipper"
+    android:layout_height="match_parent"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ghostHome.dialog.AddRoomSocketDialogFragment">
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        app:strokeWidth="0dp"
+        android:id="@+id/cvDialog"
+        android:visibility="visible"
+        app:cardCornerRadius="10dp"
+        app:cardBackgroundColor="@color/white"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:background="@color/black"
+                android:paddingVertical="13dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/manrope_bold"
+                    android:text="@string/add_light_and_socket"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+                <ImageButton
+                    android:id="@+id/btnClose"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
+                    android:src="@drawable/close_wjite"
+                    android:background="?selectableItemBackgroundBorderless"
+                    />
+
+
+
+
+            </RelativeLayout>
+
+            <ViewFlipper
+                android:layout_width="match_parent"
+                android:id="@+id/viewFlipper"
+                android:layout_height="wrap_content"
+                >
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginHorizontal="30dp"
+                    android:layout_marginVertical="24dp"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center_horizontal"
+                        android:fontFamily="@font/manrope_bold"
+                        android:textAlignment="center"
+                        android:text="@string/select_section_to_add_light_and_socket_from"
+                        android:textColor="@color/menu_icon_color"
+                        android:textSize="16sp" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rvSocket"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginHorizontal="40dp"
+                    android:layout_marginVertical="24dp"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center_horizontal"
+                        android:fontFamily="@font/manrope_bold"
+                        android:textAlignment="center"
+                        android:text="Section 1"
+                        android:id="@+id/tvSection"
+                        android:textColor="@color/menu_icon_color"
+                        android:textSize="20sp" />
+                    <TextView
+                        android:layout_marginTop="12dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center_horizontal"
+                        android:fontFamily="@font/manrope_bold"
+                        android:textAlignment="center"
+                        android:text="@string/to_add_"
+                        android:textColor="@color/menu_icon_color"
+                        />
+
+                    <ViewFlipper
+                        android:layout_width="match_parent"
+                        android:id="@+id/layoutInnerFlipper"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:layout_height="wrap_content">
+                            <ProgressBar
+                                android:id="@+id/progress_circular"
+                                android:layout_marginTop="80dp"
+                                android:visibility="visible"
+                                android:layout_width="46dp"
+                                android:layout_height="46dp"
+                                android:indeterminate="true"
+                                android:layout_gravity="center_horizontal"
+                                android:indeterminateTint="@color/menu_icon_color"
+
+                                />
+                            <TextView
+                                android:layout_marginTop="8dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_gravity="center_horizontal"
+                                android:fontFamily="@font/manrope_bold"
+                                android:textAlignment="center"
+
+                                android:text="    Loading..."
+                                android:textColor="@color/menu_icon_color"
+                                />
+
+                        </LinearLayout>
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="8dp"
+                            android:id="@+id/rvLightSocket"
+                            tools:listitem="@layout/horizontal_light_layout"
+                            android:layout_height="wrap_content">
+
+                        </androidx.recyclerview.widget.RecyclerView>
+                    </ViewFlipper>
+
+
+
+
+
+                </LinearLayout>
+
+
+            </ViewFlipper>
+
+
+
+
+
+
+
+
+
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+<!--    <include layout="@layout/loading_layout"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:id="@+id/loading"-->
+<!--        android:layout_centerInParent="true"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"></include>-->
+
+
+</ViewFlipper>

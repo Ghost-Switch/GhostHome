@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="170dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:strokeWidth="0dp"
+    android:id="@+id/cvSocket"
+    android:background="?selectableItemBackground"
+    android:layout_margin="12dp"
+    app:cardCornerRadius="5dp"
+    app:cardBackgroundColor="@color/cardview_dark_background"
+    android:layout_height="170dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_margin="15dp"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/socket"
+            />
+
+        <TextView
+            android:id="@+id/tvSocket"
+            android:layout_width="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/manrope_semibold"
+            android:textColor="@color/white"
+            android:text="Socket 1"
+            />
+    </RelativeLayout>
+
+</com.google.android.material.card.MaterialCardView>

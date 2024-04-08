@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="170dp"
+    android:layout_height="170dp"
+    android:layout_margin="12dp"
+    app:cardBackgroundColor="#4E4E4E"
+    app:cardCornerRadius="5dp"
+    android:id="@+id/control_cardview">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:paddingHorizontal="10dp"
+        android:layout_height="match_parent">
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btn_more"
+            android:layout_width="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_height="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:backgroundTint="#767474"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="?selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_more" />
+
+        </androidx.cardview.widget.CardView>
+
+        <ImageView
+            android:id="@+id/ivRoom"
+            android:layout_below="@id/btn_more"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:text="@string/light_1"
+            android:src="@drawable/add_kitchen" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ivRoom"
+            android:id="@+id/tvRoom"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/manrope_bold"
+            android:layout_marginTop="4dp"
+            android:text="room"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

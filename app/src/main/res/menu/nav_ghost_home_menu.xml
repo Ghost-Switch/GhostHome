@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ShowInv="navigation_view">
+
+    <group android:id="@+id/menu_list"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/home"
+            android:icon="@drawable/ic_home"
+            android:title="@string/home" />
+
+        <item
+            android:id="@+id/rooms"
+            android:icon="@drawable/ic_rooms"
+            android:title="@string/rooms" />
+
+
+        <item
+            android:id="@+id/devices"
+            android:icon="@drawable/ic_devices"
+            android:title="@string/devices" />
+
+        <item
+            android:id="@+id/pinned_devices"
+            android:icon="@drawable/ic_pin"
+            android:title="@string/pinned_devices" />
+
+
+        <item
+            android:id="@+id/settings"
+            android:icon="@drawable/ic_settings"
+            android:title="@string/settings" />
+    </group>
+    <item android:title="">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/ghost_switch"
+                    android:title="@string/ghost_switch" />
+                <item
+                    android:id="@+id/ghost_air"
+                    android:title="@string/ghost_air" />
+            </group>
+        </menu>
+    </item>
+</menu>

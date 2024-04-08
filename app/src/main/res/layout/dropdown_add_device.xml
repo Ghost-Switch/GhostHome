@@ -1,0 +1,43 @@
+<!-- spinner_item_layout.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_margin="@dimen/_5sdp"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@drawable/ic_home"
+            android:layout_gravity="center_vertical"
+            app:tint="@color/black"
+            android:layout_marginEnd="8dp"/>
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Item"
+            style="@style/Text"
+            android:fontFamily="@font/manrope_bold"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="match_parent"
+        android:id="@+id/divider"
+        android:layout_height="wrap_content"
+        app:dividerColor="@color/divider_color"
+
+        />
+
+</LinearLayout>

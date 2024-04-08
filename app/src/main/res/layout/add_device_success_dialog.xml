@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/SCREEN"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context=".addroom.dialog.AddRoomDialogFragment">
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cvDialog"
+        style="@style/SCREEN"
+        android:layout_width="@dimen/_150sdp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        app:strokeWidth="0dp">
+
+        <LinearLayout
+            style="@style/SCREEN"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="13dp">
+
+
+                <ImageButton
+                    android:id="@+id/closeBt"
+                    style="@style/ICON"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:src="@drawable/close_wjite" />
+
+
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="54sp"
+                android:layout_height="72sp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:src="@drawable/add_success">
+
+            </ImageView>
+
+            <TextView
+                android:id="@+id/text_success"
+                style="@style/Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/manrope_regular"
+                android:text="Distribution Box has successfully"
+                android:textAlignment="center"
+                android:textSize="16sp"
+
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_save"
+                style="@style/Button"
+                android:layout_width="197sp"
+                android:layout_height="38sp"
+                android:layout_gravity="center"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:text="Okay"
+                android:textSize="12sp"
+                app:cornerRadius="3dp"
+                app:layout_constraintTop_toBottomOf="@id/password_layout" />
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+</RelativeLayout>
