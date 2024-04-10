@@ -1,29 +1,20 @@
-<androidx.cardview.widget.CardView
+<com.google.android.material.card.MaterialCardView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="170dp"
+    android:background="?selectableItemBackground"
+    app:strokeWidth="0dp"
+    android:layout_margin="12dp"
+    app:cardBackgroundColor="@color/d3d3d3"
+    app:cardCornerRadius="5dp"
     android:id="@+id/addBtn"
-    android:layout_width="@dimen/_70sdp"
-    android:layout_height="@dimen/_70sdp"
-    android:layout_margin="@dimen/_6sdp"
-    style="@style/BG_ITEM"
-    app:cardCornerRadius="@dimen/_3sdp">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:gravity="center"
-        android:paddingHorizontal="10dp">
-
-        <ImageView
-            android:layout_width="@dimen/_20sdp"
-            android:layout_height="@dimen/_20sdp"
-            android:layout_gravity="center"
-            android:src="@drawable/add_frame"
-            />
-
-    </RelativeLayout>
-
-
-</androidx.cardview.widget.CardView>
+        android:paddingHorizontal="56dp"
+        android:src="@drawable/add_frame"
+        />
+</com.google.android.material.card.MaterialCardView>
