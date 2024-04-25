@@ -60,4 +60,10 @@
     <string name="select_section_to_add_light_and_socket_from">Select section to add Light and Socket from</string>
     <string name="to_add_">To add a Light or Socket , select the available Light is your Living Room. Rename Light or Socket to identify light.</string>
     <string name="name">Name</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="enter_your_recovery_phone_number">Enter your recovery phone number to login</string>
+    <string name="recovery_phone_number">Recovery Phone Number</string>
+    <string name="send_otp">Send OTP</string>
+    <string name="now_reset_password">Now reset password</string>
+    <string name="dont_forget_it_this_time">Don\'t forget it this time</string>
 </resources>
