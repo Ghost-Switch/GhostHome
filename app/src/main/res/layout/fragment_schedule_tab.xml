@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/rootLayout"
+    android:layout_margin="12dp"
+    android:layout_height="wrap_content"
+    tools:context=".schedulelight.tabs.ScheduleTabFragment">
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="40dp"
+        android:src="@drawable/ic_add"
+        android:tint="@color/white"
+        android:visibility="gone"
+        app:maxImageSize="20dp" />
+    <ViewFlipper
+        android:layout_width="match_parent"
+        android:id="@+id/viewFlipper"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.coordinatorlayout.widget.CoordinatorLayout
+                android:layout_width="match_parent"
+                android:id="@+id/coordinatorLayout"
+                android:layout_height="wrap_content"
+                tools:context=".MainActivity">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        />
+
+
+                </RelativeLayout>
+
+            </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+            <TextView
+                android:id="@+id/hintText"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/manrope_bold"
+                android:text="Add Schedule"
+                android:textColor="@color/black"
+                android:textSize="16sp">
+
+
+            </TextView>
+
+
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="4dp"
+                    app:strokeWidth="0dp"
+                    android:layout_weight="1"
+                    app:cardUseCompatPadding="true">
+
+
+                    <TimePicker
+                        android:id="@+id/startTimePicker"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_gravity="center"
+                        android:theme="@style/DefaultTimerPckerTheme"
+                        android:timePickerMode="spinner" />
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="to"
+                    android:fontFamily="@font/manrope_bold"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_gravity="center_vertical"
+                    />
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:backgroundTint="@color/white"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="4dp"
+                    app:strokeWidth="0dp"
+                    android:layout_weight="1"
+                    app:cardUseCompatPadding="true">
+                    <TimePicker
+                        android:theme="@style/DefaultTimerPckerTheme"
+                        android:id="@+id/endTimePicker"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:timePickerMode="spinner"/>
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="28dp"
+
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+
+                    app:strokeWidth="0dp"
+                    app:cardBackgroundColor="#998E8E8E"
+                    app:cardCornerRadius="100dp"
+                    android:layout_height="wrap_content">
+                    <Spinner
+                        android:id="@+id/spinner"
+                        android:backgroundTint="@color/button_clicked_color"
+                        android:dropDownSelector="@color/light_gray_f2"
+                        android:layout_width="wrap_content"
+                        style="@style/spinnerStyle"
+                        android:dropDownWidth="match_parent"
+                        android:layout_height="wrap_content"
+                        android:popupBackground="@drawable/rounded_8_rectangle"
+                        android:paddingHorizontal="16dp"
+                        android:padding="14dp"
+
+                        />
+
+
+
+                </com.google.android.material.card.MaterialCardView>
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="0dp"/>
+                <TextView
+                    android:background="?attr/selectableItemBackground"
+                    android:id="@+id/btnSave"
+                    android:paddingHorizontal="12dp"
+                    android:textSize="16sp"
+                    android:gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/manrope_semibold"
+                    android:textColor="@color/button_clicked_color"
+                    android:text="Save"/>
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+
+
+    </ViewFlipper>
+
+</RelativeLayout>

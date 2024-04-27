@@ -34,6 +34,26 @@
 
     </style>
 
+    <style name="CustomTimePickerStyle" parent="Theme.AppCompat.Light">
+        <item name="android:textColor">@color/white</item> <!-- Change the text color as needed -->
+        <item name="android:textSize">18sp</item> <!-- Change the text size as needed -->
+    </style>
+
+    <style name="spinnerStyle"  parent="@android:style/Widget.TextView.SpinnerItem">
+        <item name="android:padding">15sp</item>
+    </style>
+
+    <style name="DefaultNumberPickerTheme" >
+        <item name="colorControlNormal">@android:color/transparent</item>
+        <item name="android:textSize">28sp</item>
+        <item name="android:fontFamily">@font/manrope_medium</item>
+    </style>
+    <style name="DefaultTimerPckerTheme" >
+        <item name="colorControlNormal">@android:color/transparent</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:fontFamily">@font/manrope_medium</item>
+
+    </style>
 
 
 </resources>

@@ -13,6 +13,7 @@ import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.ghosthome.GhostHomeActivityDirections
 import com.example.ghosthome.R
 import com.example.ghosthome.addroom.OnClickItem
 import com.example.ghosthome.addroom.OnClickMenuItem
@@ -24,6 +25,8 @@ import com.example.ghosthome.databinding.FragmentAllActiveBinding
 import com.example.ghosthome.ghostHome.adapter.AddRoomSocketMultiViewAdapter
 import com.example.ghosthome.ghostHome.viewmodel.SocketLightViewModel
 import com.example.ghosthome.home.adapter.model.SidebarModel
+import com.example.ghosthome.schedulelight.ScheduleLightDialogFragment
+import com.example.ghosthome.schedulelight.ScheduleLightDialogFragmentArgs
 
 class AllActiveFragment : Fragment(), OnClickItem, OnClickMenuItem {
     lateinit var binding: FragmentAllActiveBinding
@@ -34,7 +37,7 @@ class AllActiveFragment : Fragment(), OnClickItem, OnClickMenuItem {
     private val socketLightViewModel: SocketLightViewModel by activityViewModels()
 
     private lateinit var display: Display
-    var count: Int = 4
+    private var count: Int = 4
 
     private fun observe() {
         socketLightViewModel.dataRoomModel.observe(viewLifecycleOwner) {
@@ -74,9 +77,7 @@ class AllActiveFragment : Fragment(), OnClickItem, OnClickMenuItem {
     private fun initData() {
         list = ArrayList<AddRoomModel>()
         recyclerView = binding.rv
-
-        Toast.makeText(context, "added", Toast.LENGTH_SHORT).show()
-        socketLightViewModel.addData(AddRoomModel(2, SidebarModel("Home", R.drawable.light_socket)))
+        socketLightViewModel.addData(AddRoomModel(1, SidebarModel("Home", R.drawable.light_socket)))
         roomAdapter = AddRoomSocketMultiViewAdapter(list, context, this, this)
         recyclerView.layoutManager = GridLayoutManager(context, count)
         recyclerView.adapter = roomAdapter
@@ -96,10 +97,24 @@ class AllActiveFragment : Fragment(), OnClickItem, OnClickMenuItem {
         socketLightViewModel.dataRoomModel.removeObservers(viewLifecycleOwner)
     }
 
-    override fun onClickMenu(pos: Int) {
+    override fun onClickMenu(pos: Int,id:String) {
 //        sharedViewModel.deleteRoom(pos)
-        socketLightViewModel.positionValue = pos
-        findNavController().navigate(R.id.action_ghostHomeActivity_to_deleteConfirmationDialogFragment)
+        Toast.makeText(context, "Pos" +pos, Toast.LENGTH_SHORT).show()
+        when(id){
+           resources.getString(R.string.remove_light) -> {
+                socketLightViewModel.positionValue = pos
+                findNavController().navigate(R.id.action_ghostHomeActivity_to_deleteConfirmationDialogFragment)
+            }
+            resources.getString(R.string.schedule_light) -> {
+                val action = GhostHomeActivityDirections.actionGhostHomeActivityToScheduleLightDialogFragment(pos)
+                findNavController().navigate(action)
+            }
+            resources.getString(R.string.timer) -> {
+                val action = GhostHomeActivityDirections.actionGhostHomeActivityToScheduleLightDialogFragment(pos)
+                findNavController().navigate(action)
+            }
+        }
+
 //        roomAdapter.deleteItem(pos)
     }
 

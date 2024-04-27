@@ -5,7 +5,7 @@ interface OnClickItem{
 }
 
 interface OnClickMenuItem{
-    fun onClickMenu(pos:Int)
+    fun onClickMenu(pos:Int,id:String)
 
 }
 

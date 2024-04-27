@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
     <uses-permission android:name="android.permission.WAKE_LOCK" />
+
     <uses-feature android:name="android.hardware.sensor.accelerometer" />
     <uses-feature android:name="android.hardware.sensor.gyroscope" />
-
 
     <application
         android:allowBackup="true"
@@ -15,24 +17,27 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.GhostHome"
-        tools:targetApi="31">
+        >
+        <service
+            android:name=".service.TimerService"
+            android:enabled="true"
+            android:exported="true"></service>
+
         <activity
             android:name=".MainActivity"
-            android:windowSoftInputMode="adjustResize"
+            android:exported="true"
             android:screenOrientation="landscape"
-            android:exported="true">
+            android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".GhostHomeActivity"
-            android:windowSoftInputMode="adjustResize"
-            android:exported="true">
-        </activity>
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize"></activity>
     </application>
 
 </manifest>

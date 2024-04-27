@@ -48,8 +48,6 @@ public class HomeNameFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Navigation.findNavController(v).navigate(R.id.action_homeNameFragment_to_ghostHomeActivity);
-
-
                         }
         });
     }

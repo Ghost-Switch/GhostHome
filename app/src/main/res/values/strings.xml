@@ -60,4 +60,17 @@
     <string name="select_section_to_add_light_and_socket_from">Select section to add Light and Socket from</string>
     <string name="to_add_">To add a Light or Socket , select the available Light is your Living Room. Rename Light or Socket to identify light.</string>
     <string name="name">Name</string>
+    <string name="schedule">Schedule</string>
+    <string name="timer">Timer</string>
+    <string name="remove_light">Remove Light</string>
+    <string name="look_settings">Look Settings</string>
+    <string name="lock_light">Lock Light</string>
+    <string name="schedule_light">Schedule Light</string>
+    <string name="pin_light">Pin Light</string>
+
+    <string-array name="scheduleList">
+        <item>Never Repeat</item>
+        <item>Daily</item>
+        <item>Weekly</item>
+    </string-array>
 </resources>

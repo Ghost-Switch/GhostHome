@@ -28,10 +28,7 @@ class MultiViewAdapter(
     var context: Context?,
     private var onClickItem:OnClickItem,
     private var onClickMenuItem: OnClickMenuItem
-
-
 ): Adapter<RecyclerView.ViewHolder>(){
-
     lateinit var binding: AddRoomCardBinding
     private lateinit var binAddItemLayoutBinding: AddItemLayoutBinding
     private var isTextVisible: Boolean= true
@@ -101,7 +98,7 @@ class MultiViewAdapter(
             popup.setOnMenuItemClickListener { menuItem: MenuItem ->
                 when (menuItem.itemId) {
                     R.id.delete -> {
-                        onClickMenuItem.onClickMenu(pos)
+                        onClickMenuItem.onClickMenu(pos,context!!.resources.getString(R.string.remove_light))
                         true // Return true to consume the event
                     }
                     R.id.add_light -> {

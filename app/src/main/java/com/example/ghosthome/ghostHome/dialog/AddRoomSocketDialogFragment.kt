@@ -62,7 +62,7 @@ class AddRoomSocketDialogFragment : DialogFragment(), OnClickSocket, OnClickAddB
         // Set Section Adapter
         list = ArrayList()
         for (i in 1..6) {
-            list.add("Socket $i")
+            list.add("Section $i")
         }
         adapter = AddRoomSocketAdapter(list, context, this)
         binding.rvSocket.layoutManager = GridLayoutManager(context, 3)

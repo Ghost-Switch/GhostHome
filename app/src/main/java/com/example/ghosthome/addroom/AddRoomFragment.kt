@@ -86,7 +86,7 @@ class AddRoomFragment : Fragment(),OnClickItem ,OnClickMenuItem {
         sharedViewModel.dataList.removeObservers(viewLifecycleOwner)
     }
 
-    override fun onClickMenu(pos: Int) {
+    override fun onClickMenu(pos: Int,id:String) {
 //        sharedViewModel.deleteRoom(pos)
         sharedViewModel.positionValue = pos
         findNavController().navigate(R.id.action_addRoomFragment_to_deleteConfirmationDialogFragment)

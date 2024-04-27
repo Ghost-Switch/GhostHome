@@ -9,31 +9,31 @@
         android:id="@+id/add_light"
         android:icon="@drawable/ic_pin"
         android:iconTint="@color/black"
-        android:title="Pin Light" />
+        android:title="@string/pin_light" />
     <item
         android:id="@+id/add_socket"
         android:icon="@drawable/timer"
         android:iconTint="@color/black"
-        android:title="Timer" />
+        android:title="@string/timer" />
     <item
         android:id="@+id/schedule"
         android:icon="@drawable/schedule"
         android:iconTint="@color/black"
-        android:title="Schedule Light" />
+        android:title="@string/schedule_light" />
     <item
         android:id="@+id/lock_light"
         android:icon="@drawable/lock"
         android:iconTint="@color/black"
-        android:title="Lock Light" />
+        android:title="@string/lock_light" />
     <item
         android:id="@+id/lock_setting"
         android:icon="@drawable/lock_"
         android:iconTint="@color/black"
-        android:title="Look Settings" />
+        android:title="@string/look_settings" />
     <item
 
         android:id="@+id/delete"
         android:icon="@drawable/menu"
-        android:title="Remove Light" />
+        android:title="@string/remove_light" />
 
 </menu>

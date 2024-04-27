@@ -93,11 +93,15 @@ class AddRoomSocketMultiViewAdapter(
             popup.setOnMenuItemClickListener { menuItem: MenuItem ->
                 when (menuItem.itemId) {
                     R.id.delete -> {
-                        onClickMenuItem.onClickMenu(pos)
+                        onClickMenuItem.onClickMenu(pos,context!!.resources.getString(R.string.remove_light))
                         true // Return true to consume the event
                     }
                     R.id.add_light -> {
                         // Handle item 2 click
+                        true // Return true to consume the event
+                    }
+                    R.id.schedule -> {
+                        onClickMenuItem.onClickMenu(pos,context!!.resources.getString(R.string.schedule_light))
                         true // Return true to consume the event
                     }
                     // Handle other menu items if needed

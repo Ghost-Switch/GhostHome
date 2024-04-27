@@ -1,17 +1,21 @@
 package com.example.ghosthome
 
 import android.animation.ValueAnimator
+import android.app.Notification
+import android.app.NotificationChannel
+import android.app.NotificationManager
+import android.content.ContentValues.TAG
+import android.content.Intent
+import android.os.Build
 import android.os.Bundle
 import android.os.Handler
+import android.util.Log
 import android.view.View
-import android.view.ViewGroup
-import android.view.animation.Animation
-import android.view.animation.TranslateAnimation
-import android.widget.FrameLayout
 import android.widget.ImageButton
 import android.widget.LinearLayout
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.Navigation.findNavController
+import androidx.core.content.ContextCompat
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -20,6 +24,8 @@ import com.example.ghosthome.addroom.OnClickItem
 import com.example.ghosthome.databinding.ActivityMainBinding
 import com.example.ghosthome.home.adapter.SidebarAdapter
 import com.example.ghosthome.home.adapter.model.SidebarModel
+import com.example.ghosthome.service.TimerService
+import java.sql.Time
 
 
 class MainActivity : AppCompatActivity(), OnClickItem {
@@ -49,6 +55,8 @@ class MainActivity : AppCompatActivity(), OnClickItem {
 
 
     }
+
+
 
     private fun setSideBar() {
 
@@ -96,9 +104,6 @@ class MainActivity : AppCompatActivity(), OnClickItem {
         adapter = SidebarAdapter(list, this,this)
         binding.recyclerview.layoutManager = LinearLayoutManager(this)
         binding.recyclerview.adapter = adapter
-
-
-
 
     }
 
