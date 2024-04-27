@@ -59,6 +59,9 @@
         <action
             android:id="@+id/action_ghostHomeActivity_to_deleteConfirmationDialogFragment"
             app:destination="@id/deleteConfirmationDialogFragment" />
+        <action
+            android:id="@+id/action_ghostHomeActivity_to_scheduleLightDialogFragment"
+            app:destination="@id/scheduleLightDialogFragment" />
     </fragment>
     <dialog
         android:id="@+id/addRoomDialogFragment"
@@ -126,4 +129,14 @@
         android:name="com.example.ghosthome.ghostHome.dialog.AddLightDialogFragment"
         android:label="fragment_add_light_dialog"
         tools:layout="@layout/fragment_add_light_dialog" />
+    <dialog
+        android:id="@+id/scheduleLightDialogFragment"
+        android:name="com.example.ghosthome.schedulelight.ScheduleLightDialogFragment"
+        android:label="fragment_schedule_light_dialog"
+        tools:layout="@layout/fragment_schedule_light_dialog" >
+
+        <argument
+            android:name="arg"
+            app:argType="integer" />
+    </dialog>
 </navigation>
