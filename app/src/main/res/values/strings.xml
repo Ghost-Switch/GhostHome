@@ -65,14 +65,38 @@
     <string name="remove_light">Remove Light</string>
     <string name="look_settings">Look Settings</string>
     <string name="lock_light">Lock Light</string>
+    <string name="unlock_light">Unlock Light</string>
     <string name="schedule_light">Schedule Light</string>
     <string name="pin_light">Pin Light</string>
+    <string name="unpin_light">Unpin Light</string>
     <string name="forgot_password">Forgot Password?</string>
     <string name="enter_your_recovery_phone_number">Enter your recovery phone number to login</string>
     <string name="recovery_phone_number">Recovery Phone Number</string>
     <string name="send_otp">Send OTP</string>
     <string name="now_reset_password">Now reset password</string>
     <string name="dont_forget_it_this_time">Dont forget it this time</string>
+    <string name="light_1_schedule_and_timer">Light 1 Schedule and Timer</string>
+    <string name="comes_on">comes on automatically when there is power source</string>
+    <string name="choose_how">Choose how long your pin should last</string>
+    <string name="_24hours">24hours</string>
+    <string name="_7_days">7 days</string>
+    <string name="_30_days">30 days</string>
+    <string name="pin">Pin</string>
+    <string name="cancel">Cancel</string>
+    <string name="unpin">UnPin</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="has_been_locked">has been Locked</string>
+    <string name="has_been_unlocked">has been UnLocked</string>
+    <string name="lock_settings">Lock Settings</string>
+    <string name="disable_lock">Disable lock</string>
+    <string name="set_up_lock_pin">Set up Lock Pin</string>
+    <string name="change_lock_pin">Change Lock Pin</string>
+    <string name="forgot_lock_pin">Forgot Lock Pin</string>
+    <string name="forgot_pin">Forgot Pin</string>
+    <string name="enter_your_recovery_phone">Enter your recovery phone number</string>
+    <string name="otp_expires_in_180_secs">OTP expires in <font color="#2E2E2E"><b>180 secs</b></font></string>
+    <string name="enter_current_4_digit_pin_for_living_room_security">Enter Current 4 digit PIN for living room security</string>
 
     <string-array name="scheduleList">
         <item>Never Repeat</item>

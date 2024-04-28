@@ -4,7 +4,7 @@
     android:layout_width="170dp"
     android:layout_height="170dp"
     android:layout_margin="12dp"
-    app:cardBackgroundColor="#4E4E4E"
+    app:cardBackgroundColor="@color/_4e4e4e"
     app:cardCornerRadius="5dp"
     android:id="@+id/control_cardview">
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -16,32 +16,58 @@
             android:layout_height="55dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
-            android:backgroundTint="#2F2F2F"
+            app:cardBackgroundColor="@color/_2f2f2f"
             app:cardCornerRadius="30dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
             <ImageView
                 android:id="@+id/light_icon"
+                android:layout_marginHorizontal="@dimen/_3sdp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:src="@drawable/ic_light"
                  />
         </androidx.cardview.widget.CardView>
-        <androidx.cardview.widget.CardView
-            android:id="@+id/btnMore"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp"
-            android:backgroundTint="#767474"
-            app:cardCornerRadius="10dp"
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_height="wrap_content">
+            <androidx.cardview.widget.CardView
+                android:id="@+id/btnMore"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                app:cardBackgroundColor="@color/gray7674"
+                app:cardCornerRadius="10dp">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_more" />
+            </androidx.cardview.widget.CardView>
+
             <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="@drawable/ic_more" />
-        </androidx.cardview.widget.CardView>
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/iv_pin"
+                android:src="@drawable/ic_pin"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:visibility="gone"
+                app:tint="@color/white" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/iv_lock"
+                android:src="@drawable/lock"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:visibility="gone"
+                app:tint="@color/white" />
+
+        </LinearLayout>
+
         <TextView
             android:id="@+id/textview_light"
             android:layout_width="wrap_content"
@@ -49,19 +75,20 @@
             android:layout_marginBottom="15dp"
             android:fontFamily="@font/manrope_semibold"
             android:text="@string/light_1"
-            android:textColor="#C8C8C8"
-            android:textSize="19sp"
+            android:textColor="@color/c8c8c8"
+            android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@id/light_cardview" />
         <com.google.android.material.switchmaterial.SwitchMaterial
             android:id="@+id/light_switch"
             android:layout_width="50dp"
             android:layout_height="28dp"
-            android:layout_marginEnd="20dp"
+            android:layout_marginEnd="10dp"
+            android:checked="false"
             app:layout_constraintBottom_toBottomOf="@id/textview_light"
             app:layout_constraintEnd_toEndOf="parent"
             app:thumbTint="@color/switch_thum_color"
-            app:trackTint="@color/white" />
+            app:trackTint="@color/switch_thrack_color" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 

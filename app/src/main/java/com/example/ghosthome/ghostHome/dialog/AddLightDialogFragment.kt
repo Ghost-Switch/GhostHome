@@ -69,9 +69,9 @@ class AddLightDialogFragment : DialogFragment() {
         },1000)
     }private fun initData() {
         spinnerList = ArrayList()
-        sidebarModel = SidebarModel("",0)
-        spinnerList.add(SidebarModel("Light",R.drawable.ic_light))
-        spinnerList.add(SidebarModel("Socket",R.drawable.kitchen))
+        sidebarModel = SidebarModel("",0,null,null)
+        spinnerList.add(SidebarModel("Light",R.drawable.ic_light,null,null))
+        spinnerList.add(SidebarModel("Socket",R.drawable.kitchen,null,null))
         val adapter = CustomSpinnerAdapter(context, spinnerList)
         binding.spinner.adapter = adapter
         binding.spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {

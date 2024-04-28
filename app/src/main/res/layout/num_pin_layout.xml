@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:gravity="center_horizontal"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.chaos.view.PinView
+        android:id="@+id/pinView_otp"
+        style="@style/PinWidget.PinView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/manrope_semibold"
+        android:gravity="center_horizontal"
+        android:inputType="numberPassword"
+        android:textColor="@color/green"
+        android:textSize="12sp"
+        app:itemCount="6"
+        app:itemHeight="35dp"
+        app:itemRadius="0dp"
+        app:itemSpacing="5dp"
+        app:itemWidth="38dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ic_phone"
+        app:lineColor="@color/pinview_line_color"
+        app:lineWidth="1dp" />
+
+</LinearLayout>

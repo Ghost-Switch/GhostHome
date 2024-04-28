@@ -1,11 +1,13 @@
 package com.example.ghosthome.addroom
 
+import com.example.ghosthome.addroom.model.AddRoomModel
+
 interface OnClickItem{
     fun onclick(text:Int)
 }
 
 interface OnClickMenuItem{
-    fun onClickMenu(pos:Int,id:String)
+    fun onClickMenu(pos:Int,id:String,model:AddRoomModel?)
 
 }
 

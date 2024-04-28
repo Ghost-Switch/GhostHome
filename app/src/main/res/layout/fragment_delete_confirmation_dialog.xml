@@ -6,7 +6,6 @@
     android:layout_height="wrap_content"
     tools:context=".addroom.dialog.DeleteConfirmationDialogFragment">
 
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:id="@+id/firstLayout"

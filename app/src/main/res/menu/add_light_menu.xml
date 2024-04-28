@@ -6,7 +6,7 @@
         android:icon="@drawable/rename"
         android:title="@string/rename_type" />
     <item
-        android:id="@+id/add_light"
+        android:id="@+id/pin_light"
         android:icon="@drawable/ic_pin"
         android:iconTint="@color/black"
         android:title="@string/pin_light" />

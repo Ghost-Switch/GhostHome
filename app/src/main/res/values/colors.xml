@@ -16,5 +16,13 @@
     <color name="green">#34A853</color>
     <color name="pin_line_color">#80D9D9D9</color>
     <color name="cbcbcb">#CBCBCB</color>
+    <color name="gray7674">#767474</color>
+    <color name="_4e4e4e">#4E4E4E</color>
+    <color name="_2f2f2f">#2F2F2F</color>
+    <color name="_767474">#767474</color>
+    <color name="e1000f">#E1000F</color>
+    <color name="aa0000">#AA0000</color>
+    <color name="c8c8c8">#C8C8C8</color>
+    <color name="f4f4f4">#F4F4F4</color>
 
 </resources>

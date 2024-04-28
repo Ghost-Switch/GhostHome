@@ -9,8 +9,6 @@ import com.example.ghosthome.R
 
 
 class ForgetPasswordFragment : Fragment() {
-
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

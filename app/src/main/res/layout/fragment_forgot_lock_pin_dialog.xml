@@ -1,0 +1,444 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="forgotlockpin.ForgotLockPinFragmentDialog">
+
+
+    <ViewFlipper
+        android:id="@+id/viewFlipper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="54dp"
+
+            app:cardBackgroundColor="@color/white"
+            app:strokeWidth="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/black2E"
+                    android:gravity="center"
+                    android:padding="@dimen/_7sdp">
+
+
+                    <TextView
+                        android:id="@+id/tvHeader"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/manrope_bold"
+                        android:text="@string/lock_settings"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="21dp"
+                    android:paddingTop="@dimen/_20sdp"
+                    android:paddingBottom="52dp">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:elevation="0dp"
+                        android:layout_marginVertical="6dp"
+                        app:cardBackgroundColor="@color/nav_menu_background_color"
+                        app:cardCornerRadius="1dp"
+                        app:cardElevation="0dp"
+                        app:strokeWidth="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="12dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginVertical="12dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/manrope_medium"
+                                android:text="@string/disable_lock"
+                                android:textColor="@color/black2E"
+                                android:textSize="14sp" />
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                />
+
+                            <androidx.appcompat.widget.SwitchCompat
+                                android:layout_width="wrap_content"
+                                android:checked="true"
+                                app:thumbTint="@color/black2E"
+                                app:trackTint="@color/cbcbcb"
+                                android:layout_height="30dp" />
+
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:id="@+id/btnSetUp"
+                        android:elevation="0dp"
+                        android:layout_marginVertical="6dp"
+                        app:cardBackgroundColor="@color/nav_menu_background_color"
+                        app:cardCornerRadius="1dp"
+                        app:cardElevation="0dp"
+                        app:strokeWidth="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="12dp"
+
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginVertical="12dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/manrope_medium"
+                                android:text="@string/set_up_lock_pin"
+                                android:textColor="@color/black2E"
+                                android:textSize="14sp" />
+
+
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:elevation="0dp"
+                        android:id="@+id/btnChangePin"
+                        android:layout_marginVertical="6dp"
+                        app:cardBackgroundColor="@color/nav_menu_background_color"
+                        app:cardCornerRadius="1dp"
+                        app:cardElevation="0dp"
+                        app:strokeWidth="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="12dp"
+
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginVertical="12dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/manrope_medium"
+                                android:text="@string/change_lock_pin"
+                                android:textColor="@color/black2E"
+                                android:textSize="14sp" />
+
+
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:id="@+id/btnForgotPin"
+                        android:elevation="0dp"
+                        android:layout_marginVertical="6dp"
+                        app:cardBackgroundColor="@color/nav_menu_background_color"
+                        app:cardCornerRadius="1dp"
+                        app:cardElevation="0dp"
+                        app:strokeWidth="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="12dp"
+
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginVertical="12dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/manrope_medium"
+                                android:text="@string/forgot_lock_pin"
+                                android:textColor="@color/black2E"
+                                android:textSize="14sp" />
+
+
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </com.google.android.material.card.MaterialCardView>
+        <ViewFlipper
+            android:id="@+id/changePinFlipper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <include
+                android:id="@+id/changePinLayout"
+                layout="@layout/change_pin_layout"/>
+            <include
+                android:id="@+id/newPinLayout"
+                layout="@layout/change_pin_layout"/>
+            <include
+                android:id="@+id/changelayoutDone"
+                layout="@layout/layout_done"/>
+
+        </ViewFlipper>
+        <ViewFlipper
+            android:id="@+id/setUpFlipper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include
+                android:id="@+id/setUpPinLayout"
+                layout="@layout/lock_pin_layout" />
+            <include
+                android:id="@+id/setUpConfirmPin"
+                layout="@layout/lock_pin_layout" />
+            <include
+                android:id="@+id/loading"
+                layout="@layout/loading_layout" />
+            <include
+                android:id="@+id/done"
+                layout="@layout/layout_done" />
+        </ViewFlipper>
+        <ViewFlipper
+            android:id="@+id/forgotFlipper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="54dp"
+
+                app:cardBackgroundColor="@color/white"
+                app:strokeWidth="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/black2E"
+                        android:gravity="center"
+                        android:padding="@dimen/_7sdp">
+
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/manrope_bold"
+                            android:text="@string/forgot_pin"
+                            android:textColor="@color/white"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+
+                        android:orientation="vertical"
+                        android:paddingHorizontal="21dp"
+                        android:paddingTop="@dimen/_20sdp"
+                        android:paddingBottom="52dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/manrope_regular"
+                            android:layout_gravity="center_horizontal"
+                            android:text="@string/enter_your_recovery_phone"
+                            android:textColor="@color/menu_icon_color"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/manrope_semibold"
+                            android:layout_marginTop="@dimen/_18sdp"
+                            android:text="Recovery Phone Number"
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/password_layout"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            app:boxStrokeWidth="0dp"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:layout_height="wrap_content"
+                            app:boxBackgroundColor="@color/f4f4f4"
+                            android:baselineAligned="false"
+                            android:textColorHint="@color/black"
+                            app:errorEnabled="false"
+                            app:helperTextEnabled="true"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_password"
+                            app:placeholderTextColor="#F4F3F3">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/password_et"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="14sp"
+                                android:fontFamily="@font/manrope_medium"
+                                android:focusableInTouchMode="true"
+                                android:inputType="number"
+                                app:cornerRadius="12dp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnSendOtp"
+                            android:layout_width="match_parent"
+                            android:layout_height="55dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            android:text="@string/send_otp"
+                            android:backgroundTint="@color/button_clicked_color"
+                            android:textColor="@color/white"
+                            app:layout_constraintTop_toBottomOf="@id/password_layout"
+                            app:cornerRadius="1dp"
+                            android:layout_marginTop="18dp"
+                            />
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="54dp"
+
+                app:cardBackgroundColor="@color/white"
+                app:strokeWidth="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/black2E"
+                        android:gravity="center"
+                        android:padding="@dimen/_7sdp">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/manrope_bold"
+                            android:text="@string/forgot_pin"
+                            android:textColor="@color/white"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+
+                        android:orientation="vertical"
+                        android:paddingHorizontal="21dp"
+                        android:paddingTop="@dimen/_20sdp"
+                        android:paddingBottom="52dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:fontFamily="@font/manrope_regular"
+                            android:text="@string/otp_code_was_sent_to"
+                            android:textColor="@color/menu_icon_color"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:fontFamily="@font/manrope_semibold"
+                            android:text="08105530818"
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="@dimen/_8sdp"
+                            android:src="@drawable/phone_icon" />
+
+                        <include
+                            android:id="@+id/forgotPinLayout"
+                            layout="@layout/num_pin_layout"
+
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:fontFamily="@font/manrope_regular"
+                            android:layout_gravity="center_horizontal"
+                            android:text="@string/otp_expires_in_180_secs"
+                            android:textColor="@color/menu_icon_color"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/manrope_semibold"
+                            android:layout_marginTop="@dimen/_3sdp"
+                            android:layout_gravity="center_horizontal"
+                            android:text="@string/i_did_not_receive_any_code"
+                            android:textColor="@color/black2E"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+            <include
+                android:id="@+id/forgotPinRecovery"
+                layout="@layout/lock_pin_layout" />
+
+        </ViewFlipper>
+
+
+    </ViewFlipper>
+
+
+
+
+
+
+</RelativeLayout>

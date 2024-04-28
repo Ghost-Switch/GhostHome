@@ -95,11 +95,11 @@ class MainActivity : AppCompatActivity(), OnClickItem {
 
     private fun initData() {
         list = listOf(
-            SidebarModel("Home",R.drawable.ic_home),
-            SidebarModel("Rooms",R.drawable.ic_rooms),
-            SidebarModel("Devices",R.drawable.ic_devices),
-            SidebarModel("Pinned Devices",R.drawable.ic_pin),
-            SidebarModel("Settings",R.drawable.ic_settings),
+            SidebarModel("Home",R.drawable.ic_home,null,null),
+            SidebarModel("Rooms",R.drawable.ic_rooms,null,null),
+            SidebarModel("Devices",R.drawable.ic_devices,null,null),
+            SidebarModel("Pinned Devices",R.drawable.ic_pin,null,null),
+            SidebarModel("Settings",R.drawable.ic_settings,null,null),
         )
         adapter = SidebarAdapter(list, this,this)
         binding.recyclerview.layoutManager = LinearLayoutManager(this)
@@ -169,6 +169,11 @@ class MainActivity : AppCompatActivity(), OnClickItem {
                 binding.fragmentContainerView.findNavController().navigate(R.id.addRoomFragment)
 
             }
+            3 -> {
+                binding.fragmentContainerView.findNavController().navigate(R.id.pinDeviceFragment)
+
+            }
+
         }
     }
 

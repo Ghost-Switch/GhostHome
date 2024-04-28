@@ -4,8 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
     app:startDestination="@id/ghostHomeActivity">
-
-
     <fragment
         android:id="@+id/getStartedFragment"
         android:name="com.example.ghosthome.register.RegisterFragment"
@@ -39,9 +37,6 @@
         android:label="fragment_add_room"
         tools:layout="@layout/fragment_add_room" >
         <action
-            android:id="@+id/action_addRoomFragment_to_addRoomDialogFragment"
-            app:destination="@id/addRoomDialogFragment" />
-        <action
             android:id="@+id/action_addRoomFragment_to_deleteConfirmationDialogFragment"
             app:destination="@id/deleteConfirmationDialogFragment" />
     </fragment>
@@ -62,16 +57,20 @@
         <action
             android:id="@+id/action_ghostHomeActivity_to_scheduleLightDialogFragment"
             app:destination="@id/scheduleLightDialogFragment" />
-    </fragment>
-    <dialog
-        android:id="@+id/addRoomDialogFragment"
-        android:name="com.example.ghosthome.addroom.dialog.AddRoomDialogFragment"
-        android:label="fragment_add_room_dialog"
-        tools:layout="@layout/fragment_add_room_dialog" >
         <action
-            android:id="@+id/action_addRoomDialogFragment_to_addLightDialogFragment"
-            app:destination="@id/addLightDialogFragment" />
-    </dialog>
+            android:id="@+id/action_ghostHomeActivity_to_unPinnedLightFragmentDialog3"
+            app:destination="@id/unPinnedLightFragmentDialog" />
+        <action
+            android:id="@+id/action_ghostHomeActivity_to_pinLightFragmentDialog11"
+            app:destination="@id/pinLightFragmentDialog" />
+        <action
+            android:id="@+id/action_ghostHomeActivity_to_lockLightFragmentDialog3"
+            app:destination="@id/lockLightFragmentDialog" />
+        <action
+            android:id="@+id/action_ghostHomeActivity_to_forgotLockPinFragmentDialog"
+            app:destination="@id/forgotLockPinFragmentDialog" />
+
+    </fragment>
     <dialog
         android:id="@+id/deleteConfirmationDialogFragment"
         android:name="com.example.ghosthome.addroom.dialog.DeleteConfirmationDialogFragment"
@@ -139,4 +138,47 @@
             android:name="arg"
             app:argType="integer" />
     </dialog>
+    <dialog
+        android:id="@+id/pinLightFragmentDialog"
+        android:name="com.example.ghosthome.pinlight.PinLightFragmentDialog"
+        android:label="fragment_pin_light_dialog"
+        tools:layout="@layout/fragment_pin_light_dialog" >
+        <argument
+            android:name="argModel"
+            app:argType="com.example.ghosthome.addroom.model.AddRoomModel" />
+    </dialog>
+    <dialog
+        android:id="@+id/unPinnedLightFragmentDialog"
+        android:name="com.example.ghosthome.unpinlight.UnPinnedLightFragmentDialog"
+        android:label="fragment_un_pinned_light_dialog"
+        tools:layout="@layout/fragment_un_pinned_lighet_dialog" >
+        <argument
+            android:name="argModel"
+            app:argType="com.example.ghosthome.addroom.model.AddRoomModel" />
+    </dialog>
+    <dialog
+        android:id="@+id/lockLightFragmentDialog"
+        android:name="com.example.ghosthome.locklight.LockLightFragmentDialog"
+        android:label="fragment_lock_light_dialog"
+        tools:layout="@layout/fragment_lock_light_dialog" >
+        <argument
+            android:name="argModel"
+            app:argType="com.example.ghosthome.addroom.model.AddRoomModel" />
+    </dialog>
+    <dialog
+        android:id="@+id/forgotLockPinFragmentDialog"
+        android:name="forgotlockpin.ForgotLockPinFragmentDialog"
+        android:label="fragment_forgot_lock_pin_dialog"
+        tools:layout="@layout/fragment_forgot_lock_pin_dialog" >
+        <argument
+            android:name="argModel"
+            app:argType="com.example.ghosthome.addroom.model.AddRoomModel" />
+    </dialog>
+
+
+    <fragment
+        android:id="@+id/pinDeviceFragment"
+        android:name="com.example.ghosthome.pindevice.PinDeviceFragment"
+        android:label="fragment_pin_device"
+        tools:layout="@layout/fragment_pin_device" />
 </navigation>

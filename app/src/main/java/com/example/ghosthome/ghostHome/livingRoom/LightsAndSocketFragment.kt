@@ -94,7 +94,7 @@ class LightsAndSocketFragment : Fragment(), OnClickItem, OnClickMenuItem {
         socketLightViewModel.dataRoomModel.removeObservers(viewLifecycleOwner)
     }
 
-    override fun onClickMenu(pos: Int,id:String) {
+    override fun onClickMenu(pos: Int,id:String,model: AddRoomModel?) {
 //        sharedViewModel.deleteRoom(pos)
         socketLightViewModel.positionValue = pos
         findNavController().navigate(R.id.action_ghostHomeActivity_to_deleteConfirmationDialogFragment)

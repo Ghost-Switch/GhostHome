@@ -71,14 +71,15 @@ class AddRoomFragment : Fragment(),OnClickItem ,OnClickMenuItem {
     private fun initData() {
         list = ArrayList<AddRoomModel>()
         recyclerView = binding.rv
-        sharedViewModel.addData(AddRoomModel(2,SidebarModel("Home",R.drawable.add_room)))
+        sharedViewModel.addData(AddRoomModel(2,SidebarModel("Home",R.drawable.add_room,null,null)))
         roomAdapter = MultiViewAdapter(list,context,this,this)
         recyclerView.layoutManager = GridLayoutManager(context,count)
         recyclerView.adapter = roomAdapter
     }
     override fun onclick(pos: Int) {
 //        roomAdapter.addCardItem(AddRoomModel(1,SidebarModel("Home",R.drawable.ic_home)));
-        findNavController().navigate(R.id.action_addRoomFragment_to_addRoomDialogFragment)
+
+//        findNavController().navigate(R.id.action_addRoomFragment_to_addRoomDialogFragment)
     }
     override fun onDestroyView() {
         super.onDestroyView()
@@ -86,7 +87,7 @@ class AddRoomFragment : Fragment(),OnClickItem ,OnClickMenuItem {
         sharedViewModel.dataList.removeObservers(viewLifecycleOwner)
     }
 
-    override fun onClickMenu(pos: Int,id:String) {
+    override fun onClickMenu(pos: Int,id:String,model: AddRoomModel?) {
 //        sharedViewModel.deleteRoom(pos)
         sharedViewModel.positionValue = pos
         findNavController().navigate(R.id.action_addRoomFragment_to_deleteConfirmationDialogFragment)

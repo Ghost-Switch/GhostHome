@@ -98,7 +98,7 @@ class MultiViewAdapter(
             popup.setOnMenuItemClickListener { menuItem: MenuItem ->
                 when (menuItem.itemId) {
                     R.id.delete -> {
-                        onClickMenuItem.onClickMenu(pos,context!!.resources.getString(R.string.remove_light))
+                        onClickMenuItem.onClickMenu(pos,context!!.resources.getString(R.string.remove_light), null)
                         true // Return true to consume the event
                     }
                     R.id.add_light -> {

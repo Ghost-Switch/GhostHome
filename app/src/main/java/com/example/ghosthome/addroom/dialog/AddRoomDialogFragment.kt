@@ -17,12 +17,14 @@ import com.example.ghosthome.addroom.model.AddRoomModel
 import com.example.ghosthome.addroom.viewmodel.AddRoomViewModel
 import com.example.ghosthome.databinding.FragmentAddRoomDialogBinding
 import com.example.ghosthome.home.adapter.model.SidebarModel
+import com.example.ghosthome.shared.Utils
 
 class AddRoomDialogFragment : DialogFragment() {
     lateinit var binding: FragmentAddRoomDialogBinding
     private lateinit var spinnerList : ArrayList<SidebarModel>
     private val sharedViewModel: AddRoomViewModel by activityViewModels()
     lateinit var sidebarModel: SidebarModel
+    lateinit var utils: Utils
 
 
     override fun onCreateView(
@@ -33,6 +35,7 @@ class AddRoomDialogFragment : DialogFragment() {
         binding = FragmentAddRoomDialogBinding.inflate(layoutInflater)
         dialog!!.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         initData()
+        utils = Utils()
         setClickListener()
 
         return binding.root
@@ -48,6 +51,8 @@ class AddRoomDialogFragment : DialogFragment() {
                 sharedViewModel.updateData(AddRoomModel(1,sidebarModel))
                 binding.cvDialog.visibility = View.GONE
                 binding.layoutDone.visibility = View.VISIBLE
+                utils.dismissKeyboard(requireView())
+
                 Handler().postDelayed({
                 dismiss()
                 },2000)
@@ -57,12 +62,12 @@ class AddRoomDialogFragment : DialogFragment() {
 
     private fun initData() {
         spinnerList = ArrayList()
-        sidebarModel = SidebarModel("",0)
+        sidebarModel = SidebarModel("",0,false,false)
 
-        spinnerList.add(SidebarModel("Living Room",R.drawable.living_rrom))
-        spinnerList.add(SidebarModel("Kitchen",R.drawable.kitchen))
-        spinnerList.add(SidebarModel("Room",R.drawable.ic_rooms))
-        spinnerList.add(SidebarModel("Other",R.drawable.others))
+        spinnerList.add(SidebarModel("Living Room",R.drawable.living_rrom,false,false))
+        spinnerList.add(SidebarModel("Kitchen",R.drawable.kitchen,false,false))
+        spinnerList.add(SidebarModel("Room",R.drawable.ic_rooms,false,false))
+        spinnerList.add(SidebarModel("Other",R.drawable.others,false,false))
         val adapter = CustomSpinnerAdapter(context, spinnerList)
         binding.spinner.adapter = adapter
         binding.spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {

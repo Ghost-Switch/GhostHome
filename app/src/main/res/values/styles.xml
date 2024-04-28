@@ -55,6 +55,14 @@
 
     </style>
 
+    <style name="RadioButton.Login" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="android:textColor">@color/black2E</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">@font/manrope_medium</item>
+        <item name="buttonTint">@color/black2E</item>
+        <item name="android:foregroundTint">@color/gray7674</item>
+    </style>
+
 
 </resources>
 

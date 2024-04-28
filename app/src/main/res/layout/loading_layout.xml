@@ -5,6 +5,7 @@
     android:id="@+id/layoutLoading"
     android:layout_centerInParent="true"
     android:elevation="40dp"
+    android:layout_gravity="center"
     app:cardBackgroundColor="@color/white"
     app:cardCornerRadius="10dp"
     app:cardElevation="6dp"
