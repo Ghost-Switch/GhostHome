@@ -67,6 +67,12 @@
     <string name="lock_light">Lock Light</string>
     <string name="schedule_light">Schedule Light</string>
     <string name="pin_light">Pin Light</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="enter_your_recovery_phone_number">Enter your recovery phone number to login</string>
+    <string name="recovery_phone_number">Recovery Phone Number</string>
+    <string name="send_otp">Send OTP</string>
+    <string name="now_reset_password">Now reset password</string>
+    <string name="dont_forget_it_this_time">Dont forget it this time</string>
 
     <string-array name="scheduleList">
         <item>Never Repeat</item>
