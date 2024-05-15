@@ -5,7 +5,7 @@
     style="@style/SCREEN"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    tools:context=".addroom.dialog.AddRoomDialogFragment">
+    tools:context=".ui.addroom.dialog.AddRoomDialogFragment">
 
 
     <com.google.android.material.card.MaterialCardView

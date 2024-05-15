@@ -15,9 +15,9 @@ import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
 import com.example.ghosthome.databinding.ActivityGhostHomeBinding
 import com.example.ghosthome.databinding.FragmentAddRoomBinding
-import com.example.ghosthome.ghostHome.OuterTabAdapter
+import com.example.ghosthome.ui.addroom.ghostHome.OuterTabAdapter
 import com.example.ghosthome.ghostHome.livingRoom.KitchenFragment
-import com.example.ghosthome.ghostHome.livingRoom.LivingRoomFragment
+import com.example.ghosthome.ui.addroom.ghostHome.livingRoom.LivingRoomFragment
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 

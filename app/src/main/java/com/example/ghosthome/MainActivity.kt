@@ -1,31 +1,20 @@
 package com.example.ghosthome
 
 import android.animation.ValueAnimator
-import android.app.Notification
-import android.app.NotificationChannel
-import android.app.NotificationManager
-import android.content.ContentValues.TAG
-import android.content.Intent
-import android.os.Build
 import android.os.Bundle
 import android.os.Handler
-import android.util.Log
 import android.view.View
 import android.widget.ImageButton
 import android.widget.LinearLayout
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.ghosthome.addroom.OnClickItem
+import com.example.ghosthome.ui.addroom.addroom.OnClickItem
 import com.example.ghosthome.databinding.ActivityMainBinding
-import com.example.ghosthome.home.adapter.SidebarAdapter
-import com.example.ghosthome.home.adapter.model.SidebarModel
-import com.example.ghosthome.service.TimerService
-import java.sql.Time
+import com.example.ghosthome.ui.addroom.adapter.SidebarAdapter
+import com.example.ghosthome.ui.addroom.adapter.model.SidebarModel
 
 
 class MainActivity : AppCompatActivity(), OnClickItem {

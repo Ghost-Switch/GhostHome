@@ -8,7 +8,7 @@
 
     <fragment
         android:id="@+id/getStartedFragment"
-        android:name="com.example.ghosthome.register.RegisterFragment"
+        android:name="com.example.ghosthome.ui.addroom.register.RegisterFragment"
         android:label="RegisterFragment"
         tools:layout="@layout/fragment_get_started">
         <action
@@ -17,7 +17,7 @@
     </fragment>
     <fragment
         android:id="@+id/logInFragment"
-        android:name="com.example.ghosthome.login.LoginFragment"
+        android:name="com.example.ghosthome.ui.addroom.login.LoginFragment"
         android:label="LogInFragment"
         tools:layout="@layout/fragment_log_in">
         <action
@@ -26,7 +26,7 @@
     </fragment>
     <fragment
         android:id="@+id/homeNameFragment"
-        android:name="com.example.ghosthome.nameOfHome.HomeNameFragment"
+        android:name="com.example.ghosthome.ui.addroom.nameOfHome.HomeNameFragment"
         android:label="HomeNameFragment"
         tools:layout="@layout/fragment_home_name">
         <action
@@ -35,7 +35,7 @@
     </fragment>
     <fragment
         android:id="@+id/addRoomFragment"
-        android:name="com.example.ghosthome.addroom.AddRoomFragment"
+        android:name="com.example.ghosthome.ui.addroom.addroom.AddRoomFragment"
         android:label="fragment_add_room"
         tools:layout="@layout/fragment_add_room" >
         <action
@@ -65,7 +65,7 @@
     </fragment>
     <dialog
         android:id="@+id/addRoomDialogFragment"
-        android:name="com.example.ghosthome.addroom.dialog.AddRoomDialogFragment"
+        android:name="com.example.ghosthome.ui.addroom.dialog.AddRoomDialogFragment"
         android:label="fragment_add_room_dialog"
         tools:layout="@layout/fragment_add_room_dialog" >
         <action
@@ -74,20 +74,20 @@
     </dialog>
     <dialog
         android:id="@+id/deleteConfirmationDialogFragment"
-        android:name="com.example.ghosthome.addroom.dialog.DeleteConfirmationDialogFragment"
+        android:name="com.example.ghosthome.ui.addroom.dialog.DeleteConfirmationDialogFragment"
         android:label="fragment_delete_confirmation_dialog"
         tools:layout="@layout/fragment_delete_confirmation_dialog" />
     <fragment
         android:id="@+id/otpFragment"
-        android:name="com.example.ghosthome.otp.OtpFragment"
+        android:name="com.example.ghosthome.ui.addroom.otp.OtpFragment"
         android:label="OtpFragment" />
     <fragment
         android:id="@+id/lightsAndSocketFragment"
-        android:name="com.example.ghosthome.ghostHome.livingRoom.LightsAndSocketFragment"
+        android:name="com.example.ghosthome.ui.addroom.ghostHome.livingRoom.LightsAndSocketFragment"
         android:label="LightsAndSocketFragment" />
     <dialog
         android:id="@+id/addRoomSocketDialogFragment"
-        android:name="com.example.ghosthome.ghostHome.dialog.AddRoomSocketDialogFragment"
+        android:name="com.example.ghosthome.ui.addroom.ghostHome.dialog.AddRoomSocketDialogFragment"
         android:label="fragment_add_room_socket_dialog"
         tools:layout="@layout/fragment_add_room_socket_dialog" >
 
@@ -97,7 +97,7 @@
     </dialog>
     <fragment
         android:id="@+id/livingRoomFragment"
-        android:name="com.example.ghosthome.ghostHome.livingRoom.LivingRoomFragment"
+        android:name="com.example.ghosthome.ui.addroom.ghostHome.livingRoom.LivingRoomFragment"
         android:label="LivingRoomFragment" >
         <action
             android:id="@+id/action_livingRoomFragment_to_addLightDialogFragment2"
@@ -114,7 +114,7 @@
     </fragment>
     <fragment
         android:id="@+id/allActiveFragment"
-        android:name="com.example.ghosthome.ghostHome.livingRoom.AllActiveFragment"
+        android:name="com.example.ghosthome.ui.addroom.ghostHome.livingRoom.AllActiveFragment"
         android:label="fragment_all_active"
         tools:layout="@layout/fragment_all_active" >
         <action
@@ -126,12 +126,12 @@
     </fragment>
     <dialog
         android:id="@+id/addLightDialogFragment"
-        android:name="com.example.ghosthome.ghostHome.dialog.AddLightDialogFragment"
+        android:name="com.example.ghosthome.ui.addroom.ghostHome.dialog.AddLightDialogFragment"
         android:label="fragment_add_light_dialog"
         tools:layout="@layout/fragment_add_light_dialog" />
     <dialog
         android:id="@+id/scheduleLightDialogFragment"
-        android:name="com.example.ghosthome.schedulelight.ScheduleLightDialogFragment"
+        android:name="com.example.ghosthome.ui.addroom.schedulelight.ScheduleLightDialogFragment"
         android:label="fragment_schedule_light_dialog"
         tools:layout="@layout/fragment_schedule_light_dialog" >
 

@@ -8,7 +8,7 @@
     android:gravity="center"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    tools:context=".schedulelight.tabs.TimerTabFragment">
+    tools:context=".ui.addroom.schedulelight.tabs.TimerTabFragment">
 
     <ViewFlipper
         android:layout_width="match_parent"

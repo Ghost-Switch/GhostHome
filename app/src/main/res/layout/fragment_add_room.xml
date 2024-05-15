@@ -6,7 +6,7 @@
     android:layout_margin="40dp"
     android:background="@drawable/rounded_rectangle"
     android:layout_height="match_parent"
-    tools:context=".addroom.AddRoomFragment">
+    tools:context=".ui.addroom.addroom.AddRoomFragment">
 
 
     <com.wefika.flowlayout.FlowLayout

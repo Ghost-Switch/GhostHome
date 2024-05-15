@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
 
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ghostHome.dialog.AddRoomSocketDialogFragment">
+    tools:context=".ui.addroom.ghostHome.dialog.AddRoomSocketDialogFragment">
 
 
     <com.google.android.material.card.MaterialCardView

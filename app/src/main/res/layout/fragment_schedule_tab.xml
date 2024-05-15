@@ -7,7 +7,7 @@
     android:id="@+id/rootLayout"
     android:layout_margin="12dp"
     android:layout_height="wrap_content"
-    tools:context=".schedulelight.tabs.ScheduleTabFragment">
+    tools:context=".ui.addroom.schedulelight.tabs.ScheduleTabFragment">
 
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton

@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ghostHome.livingRoom.AllActiveFragment">
+    tools:context=".ui.addroom.ghostHome.livingRoom.AllActiveFragment">
 
     <com.wefika.flowlayout.FlowLayout
         android:layout_width="match_parent"
